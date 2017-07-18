@@ -1,0 +1,40 @@
+body{min-width:1000px;font-family:"Microsoft YaHei";}
+.wd{width:1000px;margin:0 auto;}
+
+#head{width:100%;float:left;border-bottom: 1px solid #ddd;background: #fffcf4;}
+#head .headbr{width:100%;height:32px;float: left;line-height:32px;background:#88d4da;}
+#head .headbr 
+#head .headsy{width:100%;float:left;height:60px;line-height: 60px;}
+#head .headsy .head-logo{width:90px;margin-right: 10px;float: left;}
+#head .headsy .head-logotxt{width:172px;height:18px;float: left;}
+#head .headsy .headlogin{width:100px;float: left;font-size: 21px;}
+#head .headsy .headlogin .head-shu{margin-right: 10px;color:#ddd;}
+#head .headsy .head-right{width:144px;float: right;overflow: hidden;}
+#head .headsy .head-right .head-ss{float: left;margin: 0 10px;color:#333;font-size: 14px;}
+#head .headsy .head-right .head-ss:hover{color:#ff6000;}
+
+#content{width:100%;float:left;}
+#content .content-login{width:760px;height:580px;border:1px solid #ddd;margin: 0 auto; margin-top: 60px;border-top:none;}
+#content .content-login .c-loginleft{width:240px;height:100%;float: left;border-right:2px dashed #ddd;}
+#content .content-login .c-loginleft .c-ltop{width:241px;height:10px;float:left; background-color:#ff9f20;margin-left: -1px;}
+#content .content-login .c-loginleft .c-lltext{width:100%;height:100%;padding:50px 40px;}
+#content .content-login .c-loginleft .c-lltext .c-wenben{width:160px; height:46px;float: left;margin-bottom: 68px;}
+#content .content-login .c-loginleft .c-lltext .c-wenben .c-wbimg{width:50px; height:46px;float: left;line-height: 46px;}
+#content .content-login .c-loginleft .c-lltext .c-wenben .c-wbtxt{width:108px; height:46px; float:left;}
+#content .content-login .c-loginleft .c-lltext .c-wenben .c-wbtxt p{height:20px;width:100%;float: left;font-size: 12px;line-height: 20px;color:#666;margin: 3px 0;}
+#content .content-login .c-loginright{width:518px;height:100%;float:left;}
+#content .content-login .c-loginright .c-lrtop{width:520px;height:10px;float:left; background-color:#ffc666;margin-left: -1px;}
+#content .content-login .c-loginright .c-lrlogin{width:100%;height:100%;float:left;padding:0 40px 50px 40px;}
+#content .content-login .c-loginright .c-lrlogin .c-lrtopt{width:100%;height:24px;line-height:24px;float: left;font-size:24px;color: #ff6000;text-align: center;margin:40px 0;}
+#content .content-login .c-loginright .c-lrlogin .c-lrform{width:100%;float: left;border-bottom: 1px dotted #ddd;}
+#content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline{width: 100%;float: left;margin-bottom: 24px;}
+#content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline .c-lrlabel{font-size: 14px;width: 100%;height:20px;margin-bottom:10px;}
+#content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline input{text-indent: 12px;font-size:14px;color:#666;border: none;outline-color:#ff9f20;}
+#content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline .c-lrinputpsd{width:100%;height:40px;border:1px solid #ddd;}
+#content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline .c-lrsubmit{width:100%;height:40px;font-size: 17px;color:#fff;background:#ff6000;outline: none;}
+#content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline .c-lrsubmit:hover{background:#ea5800;}
+#content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline span .c-lrccolor1{color:#00457d;}
+#content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline a:hover{color:#ff6000;text-decoration: underline;}
+
+#footer{width:100%;margin-top: 60px;float: left;}
+#footer p{width:100%;float:left;text-align:center;font-size: 12px;color:#999;}
