@@ -1,6 +1,5 @@
 body{min-width:1000px;font-family:"Microsoft YaHei";}
 .wd{width:1000px;margin:0 auto;}
-
 #head{width:100%;float:left;border-bottom: 1px solid #ddd;background: #fffcf4;}
 #head .headbr{width:100%;height:32px;float: left;line-height:32px;background:#FAEBD7;}
 #head .headbr .headbr-tit{width:100%;float: right;color:#fff;}
@@ -11,7 +10,7 @@ body{min-width:1000px;font-family:"Microsoft YaHei";}
 #head .headbr .headbr-tit .headbr-opena{width: 140px;float: left;text-align: center;}
 #head .headbr .headbr-tit .headbr-opena a{color:#fff;}
 #head .headbr .headbr-tit .headbr-opena a:hover{text-decoration: underline;}
-#head .headbr .headbr-tit .headbr-openb{width:140px;float: left; text-align: center;cursor: pointer;margin-left: -4px;position: relative;}
+#head .headbr .headbr-tit .headbr-openb{width:139px;float: left; text-align: center;cursor: pointer;margin-left: -4px;position: relative;}
 #head .headbr .headbr-tit .headbr-openb .headbr-hover{width:140px;position:absolute;top:32px;left:0;background:rgba(255,137,0,0.9);display: none;}
 #head .headbr .headbr-tit .headbr-openb .headbr-hover .level-ul{display: block;width:100%;float: left;}
 #head .headbr .headbr-tit .headbr-openb .headbr-hover .level-ul .level-li{width:100%;height:40px;line-height: 40px;}
@@ -23,7 +22,7 @@ body{min-width:1000px;font-family:"Microsoft YaHei";}
 
 #head .headsy{width:100%;float:left;height:60px;line-height: 60px;}
 #head .headsy .head-logo{width:90px;height:40px;margin:10px 10px 10px 0;float: left;}
-#head .headsy .head-logotxt{width:172px;height:18px;margin-top:22px;float: left;}
+#head .headsy .head-logotxt{width:172px;height:18px;margin-top:24px;float: left;}
 #head .headsy .head-title{width:600px;height:60px;float: right;}
 #head .headsy .head-title ul li{float:left;}
 #head .headsy .head-title .head-titleul{width:100%;float: left;}
@@ -43,19 +42,21 @@ body{min-width:1000px;font-family:"Microsoft YaHei";}
 #bglogo .bg-jianli:hover{background: #ffe8cd;}
 #bglogo .bg-jianli a{display:block;color:#ffa000;}
 
-#content{width:100%;float:left;}
-#content .content-login{width:760px;height:580px;border:1px solid #ddd;margin: 0 auto; margin-top: 60px;border-top:none;}
-#content .content-login .c-loginleft{width:240px;height:100%;float: left;border-right:2px dashed #ddd;}
+#content{width:100%;height:100%;float:left;}
+#content .content-login{width:760px;margin: 0 auto; margin-top: 60px;}
+#content .content-login .c-loginleft{width:240px;height:100%;float: left;border:1px solid #ddd;border-top:none;}
 #content .content-login .c-loginleft .c-ltop{width:241px;height:10px;float:left; background-color:#ff9f20;margin-left: -1px;}
-#content .content-login .c-loginleft .c-lltext{width:100%;height:100%;padding:50px 40px;}
+#content .content-login .c-loginleft .c-lltext{width:100%;padding:50px 40px;}
 #content .content-login .c-loginleft .c-lltext .c-wenben{width:160px; height:46px;float: left;margin-bottom: 68px;}
 #content .content-login .c-loginleft .c-lltext .c-wenben .c-wbimg{width:50px; height:46px;float: left;line-height: 46px;}
 #content .content-login .c-loginleft .c-lltext .c-wenben .c-wbtxt{width:108px; height:46px; float:left;}
 #content .content-login .c-loginleft .c-lltext .c-wenben .c-wbtxt p{height:20px;width:100%;float: left;font-size: 12px;line-height: 20px;color:#666;margin: 3px 0;}
-#content .content-login .c-loginright{width:518px;height:100%;float:left;}
-#content .content-login .c-loginright .c-lrtop{width:520px;height:10px;float:left; background-color:#ffc666;margin-left: -1px;}
+#content .content-login .c-loginright{width:518px;float:left;border:1px solid #ddd;margin-left: -1px;border-top:none;}
+#content .content-login .c-loginright .c-lrtop{width:518px;height:10px;float:left; background-color:#ffc666;margin-left: -1px;}
 #content .content-login .c-loginright .c-lrlogin{width:100%;height:100%;float:left;padding:0 40px 50px 40px;}
 #content .content-login .c-loginright .c-lrlogin .c-lrtopt{width:100%;height:24px;line-height:24px;float: left;font-size:24px;color: #ff6000;text-align: center;margin:40px 0;}
+#content .content-login .c-loginright .c-lrlogin .c-lrtopt a{color:red;}
+#content .content-login .c-loginright .c-lrlogin .c-lrtopt a:hover{color:#ff9720;text-decoration: underline;}
 #content .content-login .c-loginright .c-lrlogin .c-lrform{width:100%;float: left;border-bottom: 1px dotted #ddd;}
 #content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline{width: 100%;float: left;margin-bottom: 24px;}
 #content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline .c-lrlabel{font-size: 14px;width: 100%;height:20px;margin-bottom:10px;}
@@ -65,6 +66,8 @@ body{min-width:1000px;font-family:"Microsoft YaHei";}
 #content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline .c-lrsubmit:hover{background:#ea5800;}
 #content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline span .c-lrccolor1{color:#00457d;}
 #content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline a:hover{color:#ff6000;text-decoration: underline;}
+#content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline select{outline-color: #ff9f20;font-size: 14px;text-indent: 12px;color:#666;}
+#content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline .c-lrselect{width:100%;height:40px;border: 1px solid #ddd;}
 
 #content .c-texttc{width:100%;float: left;margin:20px 0;}
 #content .c-texttc .c-texttl{width:772px;height:208px;float:left;padding:30px 0px 20px;background: #fff;margin-right:30px;}

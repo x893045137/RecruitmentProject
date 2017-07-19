@@ -3,20 +3,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-		<!-- UTF-8编码 -->
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!--UTF-8编码-->
+		<meta charset="utf-8" />
 		<!-- 让bootstrap可以在IE浏览器中运行渲染模式 -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<!-- 初始化移动浏览显示-->
+		<!-- 初始化移动浏览显示 width=device-width让页面的宽度等于视图的宽度 initial-scale 缩放比率 1:1-->
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<link rel="stylesheet" href="./css/bootstrap.min.css" />
-		<link rel="stylesheet" href="./css/default.css" />
-		<link rel="stylesheet" href="./css/css.css" />
-		<script type="text/javascript" src="./js/jquery.js"></script>
-		<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+		<!-- Bootstrap.css -->
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/default.css" />
+		<link rel="stylesheet" href="css/css.css" />
+		<!-- Jquery.js -->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<!-- Bootstrap.js -->
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<title>首页</title>
-</head>
-<body>
+	</head>
+	</head>
+
+	<body>
 		<div id="head">
 			<div class="headbr">
 				<div class="wd">
@@ -46,10 +51,10 @@
 			<div class="wd">
 				<div class="headsy">
 					<div class="head-logo">
-						<a href="#"> <img src="./img/logo.png" alt="前程无忧" /></a>
+						<a href="#"> <img src="img/logo.png" alt="前程无忧" /></a>
 					</div>
 					<div class="head-logotxt">
-						<img src="./img/slogen.png" alt="" />
+						<img src="img/slogen.png" alt="" />
 					</div>
 					<div class="head-title">
 						<ul class="head-titleul">
@@ -65,7 +70,7 @@
 			</div>
 		</div>
 		<div id="bglogo">
-			<img src="./img/bjt_regular_1.jpg" alt=""/>
+			<img src="img/bjt_regular_1.jpg" alt=""/>
 			<div class="bg-jianli">
 				<a href="#">立即创建简历，去发现好工作</a>
 			</div>
@@ -114,13 +119,13 @@
 				<div class="c-texttc">
 					<div class="c-texttcc">
 						<div class="c-textimg1">
-							<a href="#"><img src="./img/img_ent1.jpg" alt=""/></a>
+							<a href="#"><img src="img/img_ent1.jpg" alt=""/></a>
 						</div>
 						<div class="c-textimg1">
-							<a href="#"><img src="./img/Banner3_0525.jpg" alt=""/></a>
+							<a href="#"><img src="img/Banner3_0525.jpg" alt=""/></a>
 						</div>
 						<div class="c-textimg1">
-							<a href="#"><img src="./img/img_ent2.jpg" alt=""/></a>
+							<a href="#"><img src="img/img_ent2.jpg" alt=""/></a>
 						</div>
 					</div>
 				</div>
