@@ -11,4 +11,7 @@ public interface UserService {
 	
 	//管理员登录
 	List<User> login(User user);
+	
+	//根据账号返回用户信息	
+	User selectByUsername(String username);
 }

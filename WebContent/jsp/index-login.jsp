@@ -87,6 +87,7 @@
 						<div class="c-lrtop"></div>
 						<div class="c-lrlogin">
 							<div class="c-lrtopt">
+								<div class="errbox" style="display:"><span class="err" id="account_err"></span>${message }<span style="display:none" id="seekpwd">
 								用户登录	
 								<span style="float: right; font-size: 14px;margin-top: 8px;"><a id="enter-login" href="#">企业登录</a></span>
 							</div>

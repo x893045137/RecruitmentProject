@@ -2,6 +2,9 @@ package com.chinasofti.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +15,7 @@ import com.chinasofti.model.User;
 import com.chinasofti.service.UserService;
 
 @Controller
+@RequestMapping("/jsp")
 public class UserController {
 
 	@Autowired
@@ -25,17 +29,17 @@ public class UserController {
 	}
 
 	@RequestMapping("/userlogin.action")
-	public String Adminlogin(@ModelAttribute("user") User user, Model model) {
-		if (user.getUsername() != null && !"".equals(user.getUsername()) && user.getPassword() != null
-				&& !"".equals(user.getPassword())) {
-			List<User> list = userService.login(user);
-			if (list.size() > 0) {
-				return "welcome";
-			} else {
-				return "index-login";
-			}
-		} else {
+	public String Adminlogin(@ModelAttribute("user") User user, Model model,HttpServletRequest rq) {
+		
+			User consumer = userService.selectByUsername(user.getUsername());
+			if(consumer != null&&consumer.getPassword().equals(user.getPassword())){
+				HttpSession session = rq.getSession();
+				session.setAttribute("consumer", consumer);
+				return "index";
+			}			
+		  else {
+			model.addAttribute("message", "帐号或密码错误");
 			return "index-login";
-		}
+		  }	
 	}
 }

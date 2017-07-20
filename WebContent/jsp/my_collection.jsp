@@ -49,21 +49,21 @@
                 
                 <a href="http://ehire.51job.com" target="_blank">企业服务</a>
             </p>
-            <div class="uer">
-                <p class="op">
-                                        <a class="uname e_icon at" href="http://i.51job.com/userset/my_51job.php?lang=c">
-                        缪晓磊                    </a>
-                </p>
-                                                                 
-                <span class="l">|</span>
-                <ul>
-                   <li class="tle"><span><a href="pindex.jsp">我的51Job</a><em class="icon_arrow"></em></span></li>
+             <div class="uer">
+              				 <p class="op">
+                			<a class="uname e_icon at" href="pindex.jsp">
+                                ${consumer.username }</a>
+                                    </p>                                             
+                			<span class="l">|</span>
+                <ul>               	
+                    <li class="tle"><span><a href="pindex.jsp?lang=c">我的51Job</a><em class="icon_arrow"></em></span></li>
                     <li class="e1 e_icon"><a href="description.jsp?lang=c">简历中心</a></li>
                     <li class="e2 e_icon"><a href="resume_browsed.jsp?lang=c">谁看过我</a></li>
                     <li class="e3 e_icon"><a href="my_collection.jsp?lang=c">我的收藏</a></li>
                     <li class="e4 e_icon "><a href="my_apply.jsp?lang=c">我的申请</a></li>
-                    <li class="e6 e_icon last"><a href="#">退出帐号</a></li>                </ul>
-            </div>
+                    <li class="e6 e_icon last"><a href="#">退出帐号</a></li>
+                                    </ul>
+           		 </div>          
         </div>
     </div>
     <!-- top end -->
