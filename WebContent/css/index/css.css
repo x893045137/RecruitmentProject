@@ -67,7 +67,7 @@ body{min-width:1000px;font-family:"Microsoft YaHei";}
 #content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline span .c-lrccolor1{color:#00457d;}
 #content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline a:hover{color:#ff6000;text-decoration: underline;}
 #content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline select{outline-color: #ff9f20;font-size: 14px;text-indent: 12px;color:#666;}
-#content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline .c-lrselect{width:100%;height:40px;border: 1px solid #ddd;}
+#content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline select.c-lrselect{width:100%;float:left;height:40px;border: 1px solid #ddd;}
 
 #content .c-texttc{width:100%;float: left;margin:20px 0;}
 #content .c-texttc .c-texttl{width:772px;height:208px;float:left;padding:30px 0px 20px;background: #fff;margin-right:30px;}
