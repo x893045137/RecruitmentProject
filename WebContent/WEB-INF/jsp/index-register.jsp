@@ -11,13 +11,13 @@
 		<!-- 初始化移动浏览显示 width=device-width让页面的宽度等于视图的宽度 initial-scale 缩放比率 1:1-->
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<!-- Bootstrap.css -->
-		<link rel="stylesheet" href="css/bootstrap.css" />
-		<link rel="stylesheet" href="css/default.css" />
-		<link rel="stylesheet" href="css/css.css" />
+		<link rel="stylesheet" href="./css/bootstrap.css" />
+		<link rel="stylesheet" href="./css/default.css" />
+		<link rel="stylesheet" href="./css/css.css" />
 		<!-- Jquery.js -->
-		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="./js/jquery.js"></script>
 		<!-- Bootstrap.js -->
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 		<title>注册</title>
 	</head>
 
@@ -26,16 +26,16 @@
 			<div class="wd">
 				<div class="headsy">
 					<div class="head-logo">
-						<a href="#"> <img src="img/logo.png" alt="前程无忧" /></a>
+						<a href="#"> <img src="./img/logo.png" alt="前程无忧" /></a>
 					</div>
 					<div class="head-logotxt">
-						<img src="img/slogen.png" alt="" />
+						<img src="./img/slogen.png" alt="" />
 					</div>
 					<div class="headlogin">
 						<span class="head-shu">|</span><span style="color:#333;">欢迎注册</span>
 					</div>
 					<div class="head-right">
-						<a class="head-ss" href="index.jsp">首页</a>
+						<a class="head-ss" href="./index.jsp">首页</a>
 						<a class="head-ss" href="#">帮助中心</a>
 					</div>
 				</div>
@@ -48,28 +48,28 @@
 						<div class="c-ltop"></div>
 						<div class="c-lltext">
 							<div class="c-wenben">
-								<div class="c-wbimg"><img src="img/lf-lo1.png" /></div>
+								<div class="c-wbimg"><img src="./img/lf-lo1.png" /></div>
 								<div class="c-wbtxt">
 									<p style="font-size: 14px;">便捷的简历填写</p>
 									<p style="color:#999">一份简历开启未来</p>
 								</div>
 							</div>
 							<div class="c-wenben">
-								<div class="c-wbimg"><img src="img/lf-lo2.png" /></div>
+								<div class="c-wbimg"><img src="./img/lf-lo2.png" /></div>
 								<div class="c-wbtxt">
 									<p style="font-size: 14px;">海量的职位优选</p>
 									<p style="color:#999">360行任你挑选</p>
 								</div>
 							</div>
 							<div class="c-wenben">
-								<div class="c-wbimg"><img src="img/lf-lo3.png" /></div>
+								<div class="c-wbimg"><img src="./img/lf-lo3.png" /></div>
 								<div class="c-wbtxt">
 									<p style="font-size: 14px;">快速的职位投递</p>
 									<p style="color:#999">分秒必争直达HR</p>
 								</div>
 							</div>
 							<div class="c-wenben">
-								<div class="c-wbimg"><img src="img/lf-lo4.png" /></div>
+								<div class="c-wbimg"><img src="./img/lf-lo4.png" /></div>
 								<div class="c-wbtxt">
 									<p style="font-size: 14px;">高效的投递反馈</p>
 									<p style="color:#999">谁看我简历早知道</p>
@@ -102,7 +102,7 @@
 										<input class="c-lrsubmit" id="user-registersub" type="button" value="注 册" />
 									</div>
 									<div class="c-lrinline">
-										<span style="width:100%;float:left;font-size:16px;text-align: center;">已经有账户啦去 <a href="index-login.jsp" style="color:#ff6000">登录</a>？</span>
+										<span style="width:100%;float:left;font-size:16px;text-align: center;">已经有账户啦去 <a href="./index-login.jsp" style="color:#ff6000">登录</a>？</span>
 									</div>
 								</div>
 							</form>
@@ -149,7 +149,7 @@
 										<input class="c-lrsubmit" id="cop-registersub" type="button" value="注 册" />
 									</div>
 									<div class="c-lrinline">
-										<span style="width:100%;float:left;font-size:16px;text-align: center;">已经有账户啦去 <a href="index-login.jsp" style="color:#ff6000">登录</a>？</span>
+										<span style="width:100%;float:left;font-size:16px;text-align: center;">已经有账户啦去 <a href="./index-login.jsp" style="color:#ff6000">登录</a>？</span>
 									</div>
 								</div>
 							</form>

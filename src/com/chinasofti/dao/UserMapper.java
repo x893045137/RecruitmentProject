@@ -1,19 +1,14 @@
 package com.chinasofti.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Component;
 
-import com.chinasofti.model.Consumer;
-
-/**
-*@author 作者：周天子;
-*
-*version 创建时间：2017年7月18日下午6:10:19
-*
-*类说明:
-*/
+import com.chinasofti.model.User;
 
 @Component
 public interface UserMapper {
 	
-	Consumer selectByUsername(String username);
+	//管理员登录
+	List<User> login(User user);
 }

@@ -1,20 +1,14 @@
 package com.chinasofti.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-import com.chinasofti.model.Consumer;
+import com.chinasofti.model.User;
 
-/**
-*@author 作者：周天子;
-*
-*version 创建时间：2017年7月18日下午6:13:09
-*
-*类说明:
-*/
-
-@Component
 public interface UserService {
 	
-	Consumer selectByUsername(String username);
-
+	//管理员登录
+	List<User> login(User user);
 }
