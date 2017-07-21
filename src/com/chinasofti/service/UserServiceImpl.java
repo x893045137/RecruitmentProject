@@ -9,28 +9,33 @@ import com.chinasofti.dao.UserMapper;
 import com.chinasofti.model.User;
 
 @Service
-public class UserServiceImpl implements UserService{
-	
+public class UserServiceImpl implements UserService {
+
 	@Autowired
 	private UserMapper userMapper;
-	
+
 	public UserMapper getUserMapper() {
 		return userMapper;
 	}
-	
+
 	public void setUserMapper(UserMapper userMapper) {
 		this.userMapper = userMapper;
 	}
 
-
-	//管理员登录
+	// 管理员登录
 	public List<User> login(User user) {
 		return userMapper.login(user);
 	}
 
 	@Override
 	public User selectByUsername(String username) {
-		
+
 		return userMapper.selectByUsername(username);
+	}
+
+	@Override
+	public int insert(User user) {
+		return userMapper.insertRegister(user);
+
 	}
 }

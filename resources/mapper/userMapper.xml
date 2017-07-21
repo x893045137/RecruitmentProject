@@ -6,15 +6,23 @@
 	<resultMap id="UserResultMap" type="User">
 		<id column="id" property="id" />
 		<result column="username" property="username" />
-		<result column="password" property="password" />		
+		<result column="password" property="password" />
 	</resultMap>
 
 	<select id="login" resultMap="UserResultMap">
 		select username ,password from user
 		<where> username=#{username} and password=#{password}</where>
 	</select>
-	
-	<select id="selectByUsername" resultMap="UserResultMap" parameterType="java.lang.String">
+
+	<select id="selectByUsername" resultMap="UserResultMap"
+		parameterType="java.lang.String">
 		select * from user where username = #{0}
 	</select>
+
+	<insert id="insertRegister" parameterType="com.chinasofti.model.User">
+		insert into user
+		(username,password )
+		values
+		( #{username,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR})
+	</insert>
 </mapper>

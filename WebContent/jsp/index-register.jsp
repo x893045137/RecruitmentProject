@@ -84,11 +84,11 @@
 							<div class="c-lrtopt">
 								用户注册 <span style="float: right; font-size: 14px;margin-top: 8px;"><a id="enter-register" href="#">企业注册</a></span>
 							</div>
-							<form id="userregisterform" action="" method="post">
+							<form id="userregisterform" action="register.action" method="post">
 								<div class="c-lrform">
 									<div class="c-lrinline">
 										<label class="c-lrlabel">用户名：<span></span></label>
-										<input class="c-lrinputpsd" id="user-registername" type="text" name="name" placeholder="请输入用户名" />
+										<input class="c-lrinputpsd" id="user-registername" type="text" name="username" placeholder="请输入用户名" />
 									</div>
 									<div class="c-lrinline">
 										<label class="c-lrlabel">密码：<span></span></label>
