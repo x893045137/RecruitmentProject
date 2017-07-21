@@ -48,6 +48,7 @@ public class UserController {
 	@RequestMapping("/register.action")
 	public ModelAndView register(User user) {
 		int i = userService.insert(user);	
+		System.out.println(i);
 		ModelAndView mav = new ModelAndView("index-login");
 		mav.addObject("user", user);
 		return mav;
