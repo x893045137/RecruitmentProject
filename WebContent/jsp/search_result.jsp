@@ -56,6 +56,25 @@
 <script language="javascript" src="http://js.51jobcdn.com/in/js/2016/layer/indtype_array_c.js?20170619"></script>
 <script language="javascript" src="http://js.51jobcdn.com/in/js/2016/layer/funtype_array_c.js?20170619"></script>
 <script language="javascript" src="http://js.51jobcdn.com/in/js/2016/pointtrack.js?20170619"></script>
+<style type="text/css">
+
+	.dw_search .search_but
+	{
+		left: 8px;
+	}
+	
+	.dw_search .mytxt {
+		 width: 300px;
+		position: absolute;
+		left: 40px;
+	}
+	
+	.dw_search .addbut input {
+		width: 90px;
+		text-align: center;
+		color: red;
+	}
+</style>
 </head>
 <body>
 <div class="header">
@@ -172,9 +191,40 @@
 </div><script>
     </script>
 <div class="dw_wp">	
-    
-    <form name="searchForm" method="post" action="" autocomplete="off">
-        
+     <form name="searchForm" method="post" action="" autocomplete="off">
+        <input type="hidden" name="lang" value="c">
+        <input type="hidden" name="stype" value="2">
+        <input type="hidden" name="postchannel" value="0000">
+        <input type="hidden" name="fromType" value="1">
+        <input type="hidden" name="line" value="">
+        <input id="confirmdate" type="hidden" name="confirmdate" value="9">
+        <input type="hidden" name="from" value="">
+        <input name="keywordtype" id="keywordtype" type="hidden" value="2" />
+        <!--搜索条件-->
+        <div class="dw_search Fm">
+            <!--关键词框 -->
+            <div class="el on" style="width:448px">
+                
+                <p class="ipt"><em class="search_but dicon Dm"></em><input type="text" maxlength="200" id="kwdselectid" placeholder="请输入关键字" autocomplete="off" vindex="-1" name="keyword" value="平面设计" class="mytxt" preval="" /></p>
+                                <p class="addbut" id="work_position_click">
+                    <input id="work_position_input" type="button" value="搜索" class="at">                  
+                </p>
+                <input name="jobarea" id="jobarea" type="hidden" value="020000" />
+                <!--搜索结果 -->
+                <div class="ul" id="KwdSearchResult" style="display:none;">
+                </div>
+                <!--搜索历史 -->
+                <div class="ul" id="searchHistory" style="display:none;">
+    <span class="tl off"><span class="bg b_his">历史记录</span></span>
+                <span class="li" onclick="javascript:window.location.href='http://search.51job.com/list/020000,000000,0000,00,9,99,%2B,2,1.html?lang=c&stype=1&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=4&dibiaoid=0&address=&line=&specialarea=00&from=&welfare='"  >上海</span>
+            <span class="li" onclick="javascript:window.location.href='http://search.51job.com/list/020000,000000,0000,00,9,02,%2B,2,1.html?lang=c&stype=1&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=4&dibiaoid=0&address=&line=&specialarea=00&from=&welfare='"  >上海+2-3千</span>
+            <span class="li" onclick="javascript:window.location.href='http://search.51job.com/list/020000,000000,0000,00,9,99,%25E5%25B9%25B3%25E9%259D%25A2%25E8%25AE%25BE%25E8%25AE%25A1,2,1.html?lang=c&stype=1&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=4&dibiaoid=0&address=&line=&specialarea=00&from=&welfare='"  >平面设计(全文)+上海</span>
+            </div>
+            </div>         
+           
+        </div>
+        <!--搜索条件 END-->
+
        
         <!--搜索条件 END-->
     </form>
@@ -244,6 +294,18 @@
                                                                                                                                             <li><a class="" href="http://search.51job.com/list/020000,000000,0000,00,9,99,%2B,2,1.html?lang=c&stype=1&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=01&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=">少于100人</a></li>
                                                                                                                                             <li><a class="" href="http://search.51job.com/list/020000,000000,0000,00,9,99,%2B,2,1.html?lang=c&stype=1&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=02&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=">100-500人</a></li>
                                                                                                                                             <li><a class="" href="http://search.51job.com/list/020000,000000,0000,00,9,99,%2B,2,1.html?lang=c&stype=1&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=03&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=">500-1000人</a></li>
+                                                                                                                                            
+                                            </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="el" id="filter_companysize">
+                    <span class="title">地区</span>
+                                                              
+                                        <ul>
+                                                                                                                                            <li><a class="dw_c_orange" href="http://search.51job.com/list/020000,000000,0000,00,9,99,%2B,2,1.html?lang=c&stype=1&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=">所有</a></li>
+                                                                                                                                            <li><a class="" href="http://search.51job.com/list/020000,000000,0000,00,9,99,%2B,2,1.html?lang=c&stype=1&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=01&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=">北京</a></li>
+                                                                                                                                            <li><a class="" href="http://search.51job.com/list/020000,000000,0000,00,9,99,%2B,2,1.html?lang=c&stype=1&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=02&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=">上海</a></li>
+                                                                                                                                            <li><a class="" href="http://search.51job.com/list/020000,000000,0000,00,9,99,%2B,2,1.html?lang=c&stype=1&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=03&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=">江苏</a></li>
                                                                                                                                             
                                             </ul>
                     <div class="clear"></div>
