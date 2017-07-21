@@ -117,7 +117,7 @@
             
 <p class="nlink">
     <a class="" href="index.jsp">首页</a>
-    <a class="" href="http://search.51job.com/jobsearch/search_result.php">职位搜索</a>
+    <a class="" href="search_result.jsp">职位搜索</a>
     <a class="" href="javascript:openAreaChannelLayer();">地区频道</a>
     <a class="" href="http://www.51job.com/default_res.php">职场资讯</a>
     <a class="" href="http://xy.51job.com/default-xs.php">校园招聘</a>
