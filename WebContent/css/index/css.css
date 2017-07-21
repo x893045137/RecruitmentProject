@@ -67,8 +67,7 @@ body{min-width:1000px;font-family:"Microsoft YaHei";}
 #content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline span .c-lrccolor1{color:#00457d;}
 #content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline a:hover{color:#ff6000;text-decoration: underline;}
 #content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline select{outline-color: #ff9f20;font-size: 14px;text-indent: 12px;color:#666;}
-#content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline select.c-lrselect{width:100%;float:left;height:40px;border: 1px solid #ddd;}
-
+#content .content-login .c-loginright .c-lrlogin .c-lrform .c-lrinline .c-lrselect{width:100%;height:40px;border: 1px solid #ddd;letter-spacing: 2px;}
 #content .c-texttc{width:100%;float: left;margin:20px 0;}
 #content .c-texttc .c-texttl{width:772px;height:208px;float:left;padding:30px 0px 20px;background: #fff;margin-right:30px;}
 #content .c-texttc .c-texttl .c-texttlt{width:193px;height:158px;float: left;border-right:1px solid #ddd;padding:10px 20px;} 
@@ -88,5 +87,31 @@ body{min-width:1000px;font-family:"Microsoft YaHei";}
 #content .c-texttc .c-texttr .c-texttrlogin .c-textlogin:hover{background: #266be7;}
 #content .c-texttc .c-texttcc{width:100%;float: left;background: #fff;height:90px;line-height: 90px;}
 #content .c-texttc .c-texttcc .c-textimg1{float: left;margin:0 9px;}
+
+#content .c-resumeleft{width:200px;float: left;}
+#content .c-resumeleft .c-resumesume{width:200px;font-size:15px;float:left;background:#fafafa;border-bottom: 1px solid #ddd;}
+#content .c-resumeleft .c-resumesume ul li:hover{border-radius: 5px;}
+#content .c-resumeright{width:780px;float: left;margin-left: 20px;}
+#content .c-resumeright .c-prointext{width:100%;float: left;padding:20px 10px;margin-bottom: 20px;}
+#content .c-resumeright .c-prointext:hover{border:1px solid #ff9f20;}
+#content .c-resumeright .c-prointext .c-ptimg{width:86px;height:130px;float: left;}
+#content .c-resumeright .c-prointext .c-ptright{width:640px;float: left;margin-left:30px;}
+#content .c-resumeright .c-prointext .c-ptright p{width:100%;height:40px;line-height:40px;float:left;font-size: 14px;color:#666;}
+#content .c-resumeright .c-prointext .c-ptright a{color:red;font-size: 14px;}
+#content .c-resumeright .c-prointext .c-ptright a:hover{color:#ff9f20;text-decoration: underline;}
+#content .c-resumeright .c-prointext .c-ptright .c-ptrborder{float:left;height:21px ;line-height:21px;padding:0 10px;margin-right:20px;}
+#content .c-resumeright .c-prointext .c-inputline{width:50%;float: left;margin:10px 0px;height:30px;line-height: 30px;}
+#content .c-resumeright .c-prointext .c-inputline .c-linelabel1{width:30%;float: left;text-align: right;}
+#content .c-resumeright .c-prointext .c-inputline .c-inputtext1{border:1px solid #ddd;width:70%;float: left;text-indent:12px;font-size: 14px;color:#666;border-radius: 5px;background: #fcfcfc;}
+#content .c-resumeright .c-prointext .c-inputline .c-inputselect1{width:70%;height:30px;line-height:30px;text-indent:12px;color:#666;border:1px solid #ddd;background: #fcfcfc;letter-spacing: 1px;}
+#content .c-resumeright .c-prointext .c-inputline2{width:100%;text-align:center;float: left;margin-top: 20px;}
+#content .c-resumeright .c-prointext .c-inputline2 .c-inputsub{width:100px;height:30px;line-height:30px;border:1px solid #ddd;outline-style: none;}
+#content .c-resumeright .c-prointext .c-inputline2 .c-inputsub:hover{background:#ff9f20;}
+#content .c-resumeright .c-prointext .c-yxtit{width:100%;height:30px;float: left;line-height: 30px;font-size: 20px;color:#ff9f20;}
+#content .c-resumeright .c-prointext .c-yxtit a{color:red;font-size: 14px;}
+#content .c-resumeright .c-prointext .c-yxtit a:hover{text-decoration: underline;}
+#content .c-resumeright .c-prointext .c-yxtxt{width:100%;padding:20px 40px;float: left;}
+#content .c-resumeright .c-prointext .c-yxtxt .c-yxtext{width:50%;float: left;height:30px;margin-top:10px;line-height: 30px;}
+
 #footer{width:100%;margin-top: 60px;float: left;}
 #footer p{width:100%;float:left;text-align:center;font-size: 12px;color:#999;}
