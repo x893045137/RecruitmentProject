@@ -57,5 +57,25 @@ public class UserBasicServiceImpl implements UserBasicService{
 	public List<User> selectUserBasic(User user) {
 		return userbasicmapper.selectUserBasic(user);
 	}
+
+	@Override
+	public int insertUserBasic(UserBasic userbasic) {
+		return userbasicmapper.insertUserBasic(userbasic);
+	}
+
+	@Override
+	public int insertUserObjective(UserObjective userobjective) {
+		return userbasicmapper.insertUserObjective(userobjective);
+	}
+
+	@Override
+	public int insertUserWorkexe(UserWorkexe userwordexe) {
+		return userbasicmapper.insertUserWorkexe(userwordexe);
+	}
+
+	@Override
+	public int insertUserEducation(UserEducation usereducation) {
+		return userbasicmapper.insertUserEducation(usereducation);
+	}
 	
 }

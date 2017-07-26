@@ -7,7 +7,7 @@ public class UserBasic {
 		//id
 		private Integer id;
 		//用户名
-		private String username;
+		private String ub_username;
 		//性别
 		private String sex;
 		//年龄
@@ -32,11 +32,12 @@ public class UserBasic {
 		public void setId(Integer id) {
 			this.id = id;
 		}
-		public String getUsername() {
-			return username;
+		
+		public String getUb_username() {
+			return ub_username;
 		}
-		public void setUsername(String username) {
-			this.username = username;
+		public void setUb_username(String ub_username) {
+			this.ub_username = ub_username;
 		}
 		public String getSex() {
 			return sex;
@@ -97,11 +98,11 @@ public class UserBasic {
 		public UserBasic() {
 		}
 		
-		public UserBasic(Integer id, String username, String sex, Integer age, String ub_address, String phone,
+		public UserBasic(Integer id, String ub_username, String sex, Integer age, String ub_address, String phone,
 				Date birthday, String cardid, String job_status, String email, Integer userid) {
 			super();
 			this.id = id;
-			this.username = username;
+			this.ub_username = ub_username;
 			this.sex = sex;
 			this.age = age;
 			this.ub_address = ub_address;
@@ -114,7 +115,7 @@ public class UserBasic {
 		}
 		@Override
 		public String toString() {
-			return "UserBasic [id=" + id + ", username=" + username + ", sex=" + sex + ", age=" + age + ", address="
+			return "UserBasic [id=" + id + ", username=" + ub_username + ", sex=" + sex + ", age=" + age + ", address="
 					+ ub_address + ", phone=" + phone + ", birthday=" + birthday + ", cardid=" + cardid + ", job_status="
 					+ job_status + ", email=" + email + ", userid=" + userid + "]";
 		}	

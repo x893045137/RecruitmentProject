@@ -70,30 +70,14 @@ public class UserBasicController {
 	//修改用户基本信息
 	@RequestMapping("/updateUserbasic.action")
 	public String UpdateUserBasic(@ModelAttribute("userbasic") UserBasic userbasic,Model model){
-		int j=userbasicservice.updateUserBasic(userbasic);
+		int i=userbasicservice.updateUserBasic(userbasic);
 		String message=null;
-		if(j>0){
-			List<User> list=userbasicservice.selectUserBasic(new User(userbasic.getUserid()));
-			List<UserBasic> userbasic2=null;
-			List<UserEducation> usereducation2 = null;
-			List<UserObjective> userobjective2 = null;
-			List<UserWorkexe> userworkexe2 = null;
-			for (int i = 0; i < list.size(); i++) {
-				userbasic2 = list.get(i).getUserbasic();
-				usereducation2 = list.get(i).getUsereducation();
-				userobjective2 = list.get(i).getUserobjective();
-				userworkexe2 = list.get(i).getUserworkexe();
-			}
-			model.addAttribute("userbasic", userbasic2); 
-			model.addAttribute("usereducation", usereducation2);
-			model.addAttribute("userobjective", userobjective2);
-			model.addAttribute("userworkexe", userworkexe2);
-			model.addAttribute("list", list);
+		if(i>0){
 			model.addAttribute("message", "信息修改成功");
-			return "index-resume";
+			return goUserBasic(new User(userbasic.getUserid()), model);
 		}else{
 			model.addAttribute("message", "信息修改失败");
-			return "index-resume";
+			return goUserBasic(new User(userbasic.getUserid()), model);
 		}
 	}
 
@@ -103,88 +87,92 @@ public class UserBasicController {
 		int j=userbasicservice.updateUserObjective(userobjective);
 		String message=null;
 		if(j>0){
-			List<User> list=userbasicservice.selectUserBasic(new User(userobjective.getUserid()));
-			List<UserBasic> userbasic2=null;
-			List<UserEducation> usereducation2 = null;
-			List<UserObjective> userobjective2 = null;
-			List<UserWorkexe> userworkexe2 = null;
-			for (int i = 0; i < list.size(); i++) {
-				userbasic2 = list.get(i).getUserbasic();
-				usereducation2 = list.get(i).getUsereducation();
-				userobjective2 = list.get(i).getUserobjective();
-				userworkexe2 = list.get(i).getUserworkexe();
-			}
-			model.addAttribute("userbasic", userbasic2); 
-			model.addAttribute("usereducation", usereducation2);
-			model.addAttribute("userobjective", userobjective2);
-			model.addAttribute("userworkexe", userworkexe2);
-			model.addAttribute("list", list);
 			model.addAttribute("message", "信息修改成功");
-			return "index-resume";
+			return goUserBasic(new User(userobjective.getUserid()), model);
 		}else{
 			model.addAttribute("message", "信息修改失败");
-			return "index-resume";
+			return goUserBasic(new User(userobjective.getUserid()), model);
 		}
 	}
 	
 	//修改用户工作经验
 	@RequestMapping("/updateUserworkexe.action")
 	public String UpdateUserWorkexe(@ModelAttribute("userworkexe") UserWorkexe userworkexe,Model model){
-		int j =userbasicservice.updateUserWorkexe(userworkexe);
+		int i =userbasicservice.updateUserWorkexe(userworkexe);
 		String message=null;
-		if(j>0){
-			List<User> list=userbasicservice.selectUserBasic(new User(userworkexe.getUserid()));
-			List<UserBasic> userbasic2=null;
-			List<UserEducation> usereducation2 = null;
-			List<UserObjective> userobjective2 = null;
-			List<UserWorkexe> userworkexe2 = null;
-			for (int i = 0; i < list.size(); i++) {
-				userbasic2 = list.get(i).getUserbasic();
-				usereducation2 = list.get(i).getUsereducation();
-				userobjective2 = list.get(i).getUserobjective();
-				userworkexe2 = list.get(i).getUserworkexe();
-			}
-			model.addAttribute("userbasic", userbasic2); 
-			model.addAttribute("usereducation", usereducation2);
-			model.addAttribute("userobjective", userobjective2);
-			model.addAttribute("userworkexe", userworkexe2);
-			model.addAttribute("list", list);
+		if(i>0){
 			model.addAttribute("message", "信息修改成功");
-			return "index-resume";
+			return goUserBasic(new User(userworkexe.getUserid()), model);
 		}else{
 			model.addAttribute("message", "信息修改失败");
-			return "index-resume";
+			return goUserBasic(new User(userworkexe.getUserid()), model);
 		}
 	}
 	
 	//修改用户教育经历
 	@RequestMapping("/updateUsereducation.action")
 	public String UpdateUserEducation(@ModelAttribute("usereducation") UserEducation usereducation,Model model){
-		int j=userbasicservice.updateUserEducation(usereducation);
+		int i=userbasicservice.updateUserEducation(usereducation);
 		String message=null;
-		if(j>0){
-			List<User> list=userbasicservice.selectUserBasic(new User(usereducation.getUserid()));
-			List<UserBasic> userbasic2=null;
-			List<UserEducation> usereducation2 = null;
-			List<UserObjective> userobjective2 = null;
-			List<UserWorkexe> userworkexe2 = null;
-			for (int i = 0; i < list.size(); i++) {
-				userbasic2 = list.get(i).getUserbasic();
-				usereducation2 = list.get(i).getUsereducation();
-				userobjective2 = list.get(i).getUserobjective();
-				userworkexe2 = list.get(i).getUserworkexe();
-			}
-			model.addAttribute("userbasic", userbasic2); 
-			model.addAttribute("usereducation", usereducation2);
-			model.addAttribute("userobjective", userobjective2);
-			model.addAttribute("userworkexe", userworkexe2);
-			model.addAttribute("list", list);
+		if(i>0){
 			model.addAttribute("message", "信息修改成功");
-			return "index-resume";
+			return goUserBasic(new User(usereducation.getUserid()), model);
 		}else{
 			model.addAttribute("message", "信息修改失败");
-			return "index-resume";
+			return goUserBasic(new User(usereducation.getUserid()), model);
 		}
 	}
 	
+	//新增用户基本信息
+	@RequestMapping("/insertUserBasic.action")
+	public String InertUserBasic(@ModelAttribute("userbasic") UserBasic userbasic,Model model){
+		int i = userbasicservice.insertUserBasic(userbasic);
+		String message=null;
+		if(i>0){
+			model.addAttribute("message", "新增信息成功");
+			return goUserBasic(new User(userbasic.getUserid()), model);
+		}else{
+			model.addAttribute("message", "新增信息失败");
+			return goUserBasic(new User(userbasic.getUserid()), model);
+		}
+ 	}
+	//新增用户求职意向
+	@RequestMapping("/insertUserObjective.action")
+	public String InsertUserObjective(@ModelAttribute("userobjective") UserObjective userobjective,Model model){
+		int i =userbasicservice.insertUserObjective(userobjective);
+		String message=null;
+		if(i>0){
+			model.addAttribute("message", "信息新增成功");
+			return goUserBasic(new User(userobjective.getUserid()), model);
+		}else{
+			model.addAttribute("message", "信息新增失败");
+			return goUserBasic(new User(userobjective.getUserid()), model);
+		}
+	}
+	//新增用户工作经验
+	@RequestMapping("/insertUserWorkexe.action")
+	public String InsertUserWorkexe(@ModelAttribute("userworkexe") UserWorkexe userworkexe,Model model){
+		int i = userbasicservice.insertUserWorkexe(userworkexe);
+		String message=null;
+		if(i>0){
+			model.addAttribute("message", "信息新增成功");
+			return goUserBasic(new User(userworkexe.getUserid()), model);
+		}else{
+			model.addAttribute("message", "信息新增失败");
+			return goUserBasic(new User(userworkexe.getUserid()), model);
+		}
+	}
+	@RequestMapping("/insertUserEducation.action")
+	public String InsertUserEducation(@ModelAttribute("usereducation") UserEducation usereducation,Model model){
+		int i=userbasicservice.insertUserEducation(usereducation);
+		String message=null;
+		if(i>0){
+			model.addAttribute("message", "信息修改成功");
+			return goUserBasic(new User(usereducation.getUserid()), model);
+		}else{
+			model.addAttribute("message", "信息修改失败");
+			return goUserBasic(new User(usereducation.getUserid()), model);
+		}
+		
+	}
 }

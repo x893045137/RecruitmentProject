@@ -4,7 +4,7 @@
 	<!-- 用户基本信息表字段 -->
 	<resultMap id="UserBasicResultMap" type="UserBasic">
 		<id column="id" property="id" />
-		<result column="username" property="username" />
+		<result column="ub_username" property="ub_username" />
 		<result column="sex" property="sex" />
 		<result column="age" property="age" />
 		<result column="ub_address" property="ub_address" />
@@ -58,7 +58,7 @@
 		<collection property="userbasic" column="userid"
 			ofType="com.chinasofti.model.UserBasic">
 			<id column="id" property="id" />
-			<result column="username" property="username" />
+			<result column="username" property="ub_username" />
 			<result column="sex" property="sex" />
 			<result column="age" property="age" />
 			<result column="ub_address" property="ub_address" />
@@ -118,12 +118,146 @@
 		u.id = uw.userid
 		where u.id = #{id}
 	</select>
+	<!-- 新增用户基本信息 -->
+	<insert id="insertUserBasic" parameterType="com.chinasofti.model.UserBasic"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into userbasic(
+		sex,
+		age,
+		ub_address,
+		phone,
+		job_status,
+		email,
+		cardid,
+		userid
+		)
+		values
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="sex!=null and '' != sex">
+				#{sex},
+			</if>
+			<if test="age!=null and '' != age">
+				#{age},
+			</if>
+			<if test="ub_address!=null and '' !=ub_address">
+				#{ub_address},
+			</if>
+			<if test="phone!=null and '' != phone">
+				#{phone},
+			</if>
+			<if test="job_status!=null and '' !=job_status">
+				#{job_status},
+			</if>
+			<if test="email!=null and '' != email">
+				#{email},
+			</if>
+			<if test="cardid!=null and '' != cardid">
+				#{cardid},
+			</if>
+			<if test="cardid!=null and '' != cardid">
+				#{userid}
+			</if>
+		</trim>
+	</insert>
+	<!-- 新增用户求职意向 -->
+	<insert id="insertUserObjective" parameterType="com.chinasofti.model.UserObjective">
+		insert into userobjective (
+		uo_salary,
+		uo_address,
+		uo_position,
+		worknature,
+		userid
+		) values
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="uo_salary!=null and '' != uo_salary">
+				#{uo_salary},
+			</if>
+			<if test="uo_address !=null and '' !=uo_address">
+				#{uo_address},
+			</if>
+			<if test="uo_position !=null and '' != uo_position">
+				#{uo_position},
+			</if>
+			<if test="worknature !=null and '' != worknature">
+				#{worknature},
+			</if>
+			<if test="userid !=null and '' != userid">
+				#{userid}
+			</if>
+		</trim>
+	</insert>
+	<!-- 新增用户工作经验 -->
+	<insert id="insertUserWorkexe" parameterType="com.chinasofti.model.UserWorkexe">
+		insert into userworkexe(
+		uw_starttime,
+		uw_endtime,
+		companyname,
+		department,
+		uw_position,
+		job_description,
+		userid
+		) values
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="null != uw_starttime and '' != uw_starttime">
+				#{uw_starttime},
+			</if>
+			<if test="null != uw_endtime and '' != uw_endtime">
+				#{uw_endtime},
+			</if>
+			<if test="null != uw_position and '' !=uw_position">
+				#{uw_position},
+			</if>
+			<if test="null != companyname and '' != companyname">
+				#{companyname},
+			</if>
+			<if test="null != department and '' != department">
+				#{department},
+			</if>
+			<if test="null != job_description and '' != job_description">
+				#{job_description},
+			</if>
+			<if test="null != userid and '' != userid">
+				#{userid}
+			</if>
+		</trim>
+	</insert>
+	<!-- 新增用户教育经历 -->
+	<insert id="insertUserEducation" parameterType="com.chinasofti.model.UserEducation">
+		insert into usereducation(
+		ue_starttime,
+		ue_endtime,
+		school,
+		record,
+		professional,
+		userid
+		) values 
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="null != ue_starttime and '' != ue_starttime">
+				#{ue_starttime},
+			</if>
+			<if test="null !=ue_endtime and '' !=ue_endtime">
+				#{ue_endtime},
+			</if>
+			<if test="null != school and '' != school">
+				#{school},
+			</if>
+			<if test="null != record and '' != record">
+				#{record},
+			</if>
+			<if test="null != professional and '' != professional">
+				#{professional},
+			</if>
+			<if test="null != userid and '' != userid">
+				#{userid}
+			</if>
+		</trim>
+	</insert>
 	<!-- 修改用户基本信息 -->
 	<update id="updateUserBasic" parameterType="com.chinasofti.model.UserBasic">
 		update userbasic
 		<set>
-			<if test="username!=null and '' !=username">
-				username=#{username},
+			<if test="ub_username!=null and '' !=ub_username">
+				ub_username=#{ub_username},
 			</if>
 			<if test="sex!=null and '' != sex">
 				sex=#{sex},
@@ -151,7 +285,7 @@
 			</if>
 		</set>
 		<where>
-			id=1
+			id=#{id}
 		</where>
 	</update>
 	<!-- 修改用户求职意向 -->
@@ -177,7 +311,7 @@
 	</update>
 
 	<!-- 修改用户工作经验 -->
-	<update id="updateUserWorkexe" parameterType="UserWorkexe">
+	<update id="updateUserWorkexe" parameterType="com.chinasofti.model.UserWorkexe">
 		update userworkexe
 		<set>
 			<if test="null != uw_starttime and '' != uw_starttime">

@@ -31,4 +31,17 @@ public interface UserBasicMapper {
 		
 		//用户简历信息
 		List<User> selectUserBasic(User user);
+		
+		//新增用户基本信息
+		int insertUserBasic(UserBasic userbasic);
+		
+		//新增用户求职意向
+		int insertUserObjective(UserObjective userobjective);
+		
+		//新增用户工作经验
+		int insertUserWorkexe(UserWorkexe userwordexe);
+		
+		//新增用户教育经历
+		int insertUserEducation(UserEducation usereducation);
+		
 }
