@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinasofti.dao.UserBasicMapper">
+	<!-- 用户基本信息表字段 -->
+	<resultMap id="UserBasicResultMap" type="UserBasic">
+		<id column="id" property="id" />
+		<result column="username" property="username" />
+		<result column="sex" property="sex" />
+		<result column="age" property="age" />
+		<result column="ub_address" property="ub_address" />
+		<result column="phone" property="phone" />
+		<result column="cardid" property="cardid" />
+		<result column="birthday" property="birthday" />
+		<result column="job_status" property="job_status" />
+		<result column="email" property="email" />
+		<result column="userid" property="userid" />
+	</resultMap>
+
+	<!-- 用户求职意向表字段 -->
+	<resultMap type="UserObjective" id="UserObjectiveResultMap">
+		<id column="id" property="id" />
+		<result column="uo_uo_salary" property="uo_salary" />
+		<result column="uo_address" property="uo_address" />
+		<result column="uo_position" property="uo_position" />
+		<result column="worknature" property="worknature" />
+		<result column="userid" property="userid" />
+	</resultMap>
+
+	<!-- 用户工作经验表字段 -->
+	<resultMap type="UserWorkexe" id="UserWorkexeResultMap">
+		<id column="id" property="id" />
+		<result column="uw_starttime" property="uw_starttime" />
+		<result column="uw_endtime" property="uw_endtime" />
+		<result column="uw_position" property="uw_position" />
+		<result column="companyname" property="companyname" />
+		<result column="department" property="department" />
+		<result column="job_description" property="job_description" />
+		<result column="userid" property="userid" />
+	</resultMap>
+	<!-- 用户教育经历表字段 -->
+	<resultMap type="UserEducation" id="UserEducationResultMap">
+		<id column="id" property="id" />
+		<result column="ue_starttime" property="ue_starttime" />
+		<result column="ue_endtime" property="ue_endtime" />
+		<result column="school" property="school" />
+		<result column="record" property="record" />
+		<result column="professional" property="professional" />
+		<result column="userid" property="userid" />
+	</resultMap>
+
+	<!-- 简历信息 多表联查 -->
+	<resultMap type="com.chinasofti.model.User" id="UserAllResultMap">
+		<!-- 用户 -->
+		<id column="id" property="id" />
+		<result column="username" property="username" />
+		<result column="password" property="password" />
+		<!-- 用户简历基本信息 -->
+		<collection property="userbasic" column="userid"
+			ofType="com.chinasofti.model.UserBasic">
+			<id column="id" property="id" />
+			<result column="username" property="username" />
+			<result column="sex" property="sex" />
+			<result column="age" property="age" />
+			<result column="ub_address" property="ub_address" />
+			<result column="phone" property="phone" />
+			<result column="cardid" property="cardid" />
+			<result column="birthday" property="birthday" />
+			<result column="job_status" property="job_status" />
+			<result column="email" property="email" />
+		</collection>
+		<collection property="userobjective" column="userid"
+			ofType="com.chinasofti.model.UserObjective">
+			<id column="id" property="id" />
+			<result column="uo_salary" property="uo_salary" />
+			<result column="uo_address" property="uo_address" />
+			<result column="uo_position" property="uo_position" />
+			<result column="worknature" property="worknature" />
+		</collection>
+		<collection property="usereducation" column="userid"
+			ofType="com.chinasofti.model.UserEducation">
+			<id column="id" property="id" />
+			<result column="ue_starttime" property="ue_starttime" />
+			<result column="ue_endtime" property="ue_endtime" />
+			<result column="school" property="school" />
+			<result column="record" property="record" />
+			<result column="professional" property="professional" />
+		</collection>
+		<collection property="userworkexe" column="userid"
+			ofType="com.chinasofti.model.UserWorkexe">
+			<id column="id" property="id" />
+			<result column="uw_starttime" property="uw_starttime" />
+			<result column="uw_endtime" property="uw_endtime" />
+			<result column="uw_position" property="uw_position" />
+			<result column="companyname" property="companyname" />
+			<result column="department" property="department" />
+			<result column="job_description" property="job_description" />
+		</collection>
+	</resultMap>
+	<!-- 查询用户简历信息 -->
+	<select id="selectUserBasic" parameterType="com.chinasofti.model.User"
+		resultMap="UserAllResultMap">
+		<!-- 外连接查询 -->
+		select * from
+		user u
+		left outer join
+		userbasic ub
+		on u.id = ub.userid
+		left
+		outer join
+		userobjective uo
+		on u.id = uo.userid
+		left outer join
+		usereducation ue
+		on u.id = ue.userid
+		left outer join
+		userworkexe uw
+		on
+		u.id = uw.userid
+		where u.id = #{id}
+	</select>
+	<!-- 修改用户基本信息 -->
+	<update id="updateUserBasic" parameterType="com.chinasofti.model.UserBasic">
+		update userbasic
+		<set>
+			<if test="username!=null and '' !=username">
+				username=#{username},
+			</if>
+			<if test="sex!=null and '' != sex">
+				sex=#{sex},
+			</if>
+			<if test="age!=null and '' != age">
+				age=#{age},
+			</if>
+			<if test="ub_address!=null and '' !=ub_address">
+				ub_address=#{ub_address},
+			</if>
+			<if test="phone!=null and '' != phone">
+				phone=#{phone},
+			</if>
+			<if test="job_status!=null and '' !=job_status">
+				job_status=#{job_status},
+			</if>
+			<if test="email!=null and '' != email">
+				email=#{email},
+			</if>
+			<if test="cardid!=null and '' != cardid">
+				cardid=#{cardid},
+			</if>
+			<if test="birthday!=null and '' !=birthday">
+				birthday=#{birthday}
+			</if>
+		</set>
+		<where>
+			id=1
+		</where>
+	</update>
+	<!-- 修改用户求职意向 -->
+	<update id="updateUserObjective" parameterType="com.chinasofti.model.UserObjective">
+		update userobjective
+		<set>
+			<if test="uo_salary!=null and '' != uo_salary">
+				uo_salary=#{uo_salary},
+			</if>
+			<if test="uo_address !=null and '' !=uo_address">
+				uo_address=#{uo_address},
+			</if>
+			<if test="uo_position !=null and '' != uo_position">
+				uo_position=#{uo_position},
+			</if>
+			<if test="worknature !=null and '' != worknature">
+				worknature=#{worknature}
+			</if>
+		</set>
+		<where>
+			id=#{id}
+		</where>
+	</update>
+
+	<!-- 修改用户工作经验 -->
+	<update id="updateUserWorkexe" parameterType="UserWorkexe">
+		update userworkexe
+		<set>
+			<if test="null != uw_starttime and '' != uw_starttime">
+				uw_starttime=#{uw_starttime},
+			</if>
+			<if test="null != uw_endtime and '' != uw_endtime">
+				uw_endtime=#{uw_endtime},
+			</if>
+			<if test="null != uw_position and '' !=uw_position">
+				uw_position = #{uw_position},
+			</if>
+			<if test="null != companyname and '' != companyname">
+				companyname=#{companyname},
+			</if>
+			<if test="null != department and '' != department">
+				department=#{department},
+			</if>
+			<if test="null != job_description and '' != job_description">
+				job_description = #{job_description}
+			</if>
+		</set>
+		<where>
+			id=#{id}
+		</where>
+	</update>
+	<!-- 修改用户教育经历 -->
+	<update id="updateUserEducation" parameterType="com.chinasofti.model.UserEducation">
+		update usereducation
+		<set>
+			<if test="null != ue_starttime and '' != ue_starttime">
+				ue_starttime=#{ue_starttime},
+			</if>
+			<if test="null !=ue_endtime and '' !=ue_endtime">
+				ue_endtime = #{ue_endtime},
+			</if>
+			<if test="null != school and '' != school">
+				school = #{school},
+			</if>
+			<if test="null != record and '' != record">
+				record = #{record},
+			</if>
+			<if test="null != professional and '' != professional">
+				professional = #{professional}
+			</if>
+		</set>
+		<where>
+			id=#{id}
+		</where>
+	</update>
+</mapper>

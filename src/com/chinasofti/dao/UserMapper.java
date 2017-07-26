@@ -17,4 +17,5 @@ public interface UserMapper {
 
 	// 登录功能
 	int insertRegister(User user);
+
 }
