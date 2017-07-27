@@ -56,11 +56,10 @@
                                     </p>                                             
                 			<span class="l">|</span>
                 <ul>               	
-                    <li class="tle"><span><a href="pindex.jsp?lang=c">我的51Job</a><em class="icon_arrow"></em></span></li>
+                    <li class="tle"><span><a href="Myjob.action?userid=${consumer.id }">我的51Job</a><em class="icon_arrow"></em></span></li>
                     <li class="e1 e_icon"><a href="description.jsp?lang=c">简历中心</a></li>
                     <li class="e2 e_icon"><a href="resume_browsed.jsp?lang=c">谁看过我</a></li>
-                    <li class="e3 e_icon"><a href="my_collection.jsp?lang=c">我的收藏</a></li>
-                    <li class="e4 e_icon "><a href="my_apply.jsp?lang=c">我的申请</a></li>
+                    <li class="e4 e_icon "><a href="selectApply.action?userid=${consumer.id }">我的申请</a></li>
                     <li class="e6 e_icon last"><a href="#">退出帐号</a></li>
                                     </ul>
            		 </div>          
@@ -117,7 +116,7 @@
             
 <p class="nlink">
     <a class="" href="index.jsp">首页</a>
-    <a class="" href="search_result.jsp">职位搜索</a>
+    <a class="" href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">职位搜索</a>
     <a class="" href="javascript:openAreaChannelLayer();">地区频道</a>
     <a class="" href="http://www.51job.com/default_res.php">职场资讯</a>
     <a class="" href="http://xy.51job.com/default-xs.php">校园招聘</a>
@@ -129,11 +128,10 @@
 <div class="content">
 	<!-- 左侧边栏 -->
 	<div class="exlt">
-    <a track-type="trackIndexClick" event-type="28" href="pindex.jsp?lang=c" class=""><span>我的51Job</span></a>
+    <a track-type="trackIndexClick" event-type="28" href="Myjob.action?userid=${consumer.id }" class=""><span>我的51Job</span></a>
     <a track-type="trackIndexClick" event-type="29" href="description.jsp?lang=c" class=""><span>简历中心</span></a>
     <a track-type="trackIndexClick" event-type="30" href="resume_browsed.jsp?lang=c" class="on"><span>谁看过我</span></a>
-    <a track-type="trackIndexClick" event-type="31" href="my_collection.jsp?lang=c" class=""><span>我的收藏</span></a>
-    <a track-type="trackIndexClick" event-type="32" href="my_apply.jsp?lang=c" class=""><span>我的申请<em class="new"></em></span></a>
+    <a track-type="trackIndexClick" event-type="32" href="selectApply.action?userid=${consumer.id }" class=""><span>我的申请<em class="new"></em></span></a>
     
     <div class="more" style="display: block;">     
     </div>

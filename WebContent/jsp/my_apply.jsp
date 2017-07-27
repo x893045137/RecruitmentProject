@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -60,7 +61,6 @@
                     <li class="tle"><span><a href="pindex.jsp?lang=c">我的51Job</a><em class="icon_arrow"></em></span></li>
                     <li class="e1 e_icon"><a href="description.jsp?lang=c">简历中心</a></li>
                     <li class="e2 e_icon"><a href="resume_browsed.jsp?lang=c">谁看过我</a></li>
-                    <li class="e3 e_icon"><a href="my_collection.jsp?lang=c">我的收藏</a></li>
                     <li class="e4 e_icon "><a href="my_apply.jsp?lang=c">我的申请</a></li>
                     <li class="e6 e_icon last"><a href="#">退出帐号</a></li>
                                     </ul>
@@ -129,7 +129,7 @@
             
 <p class="nlink">
     <a class="" href="index.jsp">首页</a>
-    <a class="" href="search_result.jsp">职位搜索</a>
+    <a class="" href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">职位搜索</a>
     <a class="" href="javascript:openAreaChannelLayer();">地区频道</a>
     <a class="" href="http://www.51job.com/default_res.php">职场资讯</a>
     <a class="" href="http://xy.51job.com/default-xs.php">校园招聘</a>
@@ -143,8 +143,7 @@
    <a track-type="trackIndexClick" event-type="28" href="pindex.jsp?lang=c" class=""><span>我的51Job</span></a>
     <a track-type="trackIndexClick" event-type="29" href="description.jsp" class=""><span>简历中心</span></a>
     <a track-type="trackIndexClick" event-type="30" href="resume_browsed.jsp?lang=c" class=""><span>谁看过我</span></a>
-    <a track-type="trackIndexClick" event-type="31" href="my_collection.jsp?lang=c" class=""><span>我的收藏</span></a>
-    <a track-type="trackIndexClick" event-type="32" href="my_apply.jsp?lang=c" class="on"><span>我的申请<em class="new"></em></span></a>
+    <a track-type="trackIndexClick" event-type="32" href="selectApply.action?userid=${consumer.id }" class="on"><span>我的申请<em class="new"></em></span></a>
 
     <div class="more" style="display: block;">
        
@@ -175,7 +174,7 @@
         <input name="s_url" type="hidden" id="s_url" value="http://xyz.51job.com/ServiceForApply/JobService.asmx/getPostCount">
         <input name="s_sign" type="hidden" id="s_sign" value="b39edfd2bce429176927f868df7e30d7">
 
-        <li class="on"><a href="http://i.51job.com/userset/my_apply.php?type=sh&lang=c">社会申请</a> <span>1</span></li>
+   
                     </ul>
         <ul class="mt_r" style="display: block;">
         <li>仅保留近60天的社会申请记录</li>
@@ -193,54 +192,54 @@
                             <li class="l11">申请日期</li>
                         </ul>
                     </div>
-                                            <div class="rli">
-                            <ul class="clearfix">
+                              <c:forEach items="${recruitinfo }" var="rec">
+                        <div class="rli">
+                              <ul class="clearfix">
                                 <li class="l4 dt">
-                                    <a target="_blank" title="品牌经理&amp;总监" href="http://jobs.51job.com/all/91830760.html?s=02&t=0">
-                                        品牌经理&amp;总监                                    </a>
+                                    <a target="_blank" title="" href="company.action?recruitID=${rec.recruitID }">
+                                        ${rec.job }                                    </a>
                                                                     </li>
-                                <li class="l9">
-                                    <a target="_blank" title="众邦金控投资有限公司" href="http://jobs.51job.com/all/co4061131.html">
-                                        众邦金控投资有限公司                                    </a>
+                                <li class="l9">                                
+                                       ${rec.companyName }                                  
                                 </li>
-                                <li class="l6">上海</li>
-                                <li class="l10 c_orange">1.5-2万/月</li>
-                                <li class="l11">2017-07-19</li>
+                                <li class="l6">${rec.companyLocation }</li>
+                                <li class="l10 c_orange">${rec.salary }</li>
+                                <li class="l11">${rec.date }</li>
                             </ul>
-                            <div class="rsp">
-                                <ul class="clearfix">
+                                    <div class="rate" style="display: none;">
+                            </div>
+                        </div>
+                              
+                              </c:forEach>             
+                            
+                           <!--  <div class="rsp">
+                               <ul class="clearfix">
                                     <li class="l8">申请：<span>我的简历1 </span> </li>
                                                                             <li class="l8">近两个月申请：
                                             <span class="c_green">6</span>人
                                         </li>
                              <li class="l12">&nbsp;<span class="c_green">&nbsp;</span></li>
-                                                                    </ul>
-                            </div>
-                            <div class="rate" style="display: none;">
-                            </div>
-                        </div>
+                                                                    </ul> 
+                            </div> -->
+                      
                                     </div>
                 <!--分页-->
-                <div class="dw_page">
+                <!-- <div class="dw_page">
                     <div class="p_box">
                         <div class="p_wp">
                             <div class="p_in">
                                 <ul>
-                                    <!-- 上一页 -->
+                                    上一页
                                   <li class="bk"><span>上一页</span></li>
-                                         <!--数字页码-->
+                                         数字页码
                                        <li class="on">1</li>
-                                           <!-- 下一页 -->
+                                           下一页
                                 <li class="bk"><span>下一页</span></li>
-                                                                    </ul>
-                                <span class="td">共1页，到第</span>
-                                <input id="jump_page" class="mytxt" type="text" value="1">
-                                <span class="td">页</span>
-                                <span class="og_but" onclick="jump_page();">确定</span>
+                                                                    </ul>                            
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             </div>
     <div class="clear"></div>

@@ -114,15 +114,14 @@
 							<div class="c-lrtopt">
 								企业注册 <span style="float: right; font-size: 14px;margin-top: 8px;"><a id="user-register" href="#">用户注册</a></span>
 							</div>
-							<form id="cop-registerform" action="" method="post">
+							<form id="cop-registerform" action="enterprise.action" method="post">
 								<div class="c-lrform">
 									<div class="c-lrinline">
 										<label class="c-lrlabel">公司地址：<span></span></label>
-										<select class="c-lrselect" id="">
+										<select class="c-lrselect" id="" name = "companyLocation">
 											<option value="上海">上海</option>
 											<option value="北京">北京</option>
-											<option value="广州">广州</option>
-											<option value="杭州">杭州</option>
+											<option value="广州">江苏</option>											
 										</select>
 									</div>
 									<div class="c-lrinline">
@@ -131,19 +130,19 @@
 									</div>
 									<div class="c-lrinline">
 										<label class="c-lrlabel">会员名：<span></span></label>
-										<input class="c-lrinputpsd"  type="text" id="enter-hyname" name="huiyuanname" placeholder="请输入会员名" />
+										<input class="c-lrinputpsd"  type="text" id="enter-hyname" name="Membership" placeholder="请输入会员名,建议使用公司简称" />
 									</div>
 									<div class="c-lrinline">
 										<label class="c-lrlabel">用户名：<span></span></label>
-										<input class="c-lrinputpsd"  type="text" id="enter-name" name="name" placeholder="请输入用户名" />
+										<input class="c-lrinputpsd"  type="text" id="enter-name" name="enterprisename" placeholder="请输入用户名" />
 									</div>
 									<div class="c-lrinline">
 										<label class="c-lrlabel">密码：<span></span></label>
-										<input class="c-lrinputpsd"  type="password" id="enter-psd" name="password" placeholder="请输入密码" />
+										<input class="c-lrinputpsd"  type="password" id="enter-psd" name="enterprisepwd" placeholder="请输入密码" />
 									</div>
 									<div class="c-lrinline">
 										<label class="c-lrlabel">确认密码：<span></span></label>
-										<input class="c-lrinputpsd"  type="password" id="enter-repsd" name="repassword" placeholder="请再次输入密码" />
+										<input class="c-lrinputpsd"  type="password" id="enter-repsd" name="renterprisepwd" placeholder="请再次输入密码" />
 									</div>
 									<div class="c-lrinline">
 										<input class="c-lrsubmit" id="cop-registersub" type="button" value="注 册" />

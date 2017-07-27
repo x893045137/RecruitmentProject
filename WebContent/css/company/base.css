@@ -1,0 +1,227 @@
+@CHARSET "UTF-8";
+html,body,p,form,ul,h1,h2,h3,h4,h5,h6,dt,dd{margin:0;padding:0}
+h1,h2,h3,h4,h5,h6{font-weight:normal}
+table{border-collapse:collapse;border-spacing:0;box-sizing:border-box}
+th,td{padding:0}
+a{color:#333;text-decoration:none}
+a:hover{color:#0179E7;text-decoration:underline}
+li{list-style:none}
+img{border:none}
+font{font-size:12px}
+input,textarea{font-size:12px;color:#474646;outline:none}
+textarea{line-height:16px}
+em,i{font-style:normal}
+
+.clear{clear:both}
+
+.sicon{background:url(http://img01.51jobcdn.com/im/jobs/small_icon.png) no-repeat}
+
+.wp{width:1002px;margin:0 auto}
+
+.shox{width:962px;margin:10px auto;padding:24px 0;border:1px solid #D4D5D6}
+.shox .tp{color:#A5A5A7}
+.shox .tp,.shox .bx{width:602px;margin:0 auto}
+.shox .tp font,.shox .tp span{display:inline-block;padding-bottom:10px}
+.shox .tp span{width:62px;text-align:center;cursor:pointer}
+.shox .mk{color:#000;background:url(http://img01.51jobcdn.com/im/jobs/arrow.png) center 18px no-repeat}
+.shox .ipt{float:left;width:394px;height:26px;overflow:hidden;margin-right:5px;padding-left:24px;background:url("http://img01.51jobcdn.com/im/2009/searchbg.gif") 5px center no-repeat;border:1px solid #A5A5A7}
+.shox .ipt input{width:100%;height:22px;line-height:22px;background-color:#FFF;border:1px solid #FFF}
+.shox .ipt .default{color:#B5B5B5}
+.shox img,.shox .chty{float:left;cursor:pointer;margin-right:5px}
+.shox .chty{width:86px;height:28px;background:url(http://img01.51jobcdn.com/im/jobs/choose_city.png) no-repeat}
+.shox .chty font{float:left;width:60px;height:28px;font:12px/28px '宋体';text-align:center;color:#000;overflow:hidden;margin-left:6px}
+
+.navdq{width:154px}
+.navdq .nvspan{float:left;width:70px;text-align:right;margin:0 5px 0 0}
+.navdq .nvdt{float:right;width:79px;height:20px;cursor:pointer;background:url("http://img01.51jobcdn.com/im/2009/area/area1.gif") -75px 0 no-repeat}
+.btshow{margin-top:4px}
+.nvspan{display:inline-block;height:22px;line-height:22px;color:#333;font-size:13px;margin:0 10px}
+.lareaurl{float:left;line-height:22px;color:#0263C1;margin:4px 0 0 20px;padding-left:20px;background:url("http://img01.51jobcdn.com/im/jobs/ntg.png") 0 center no-repeat}
+
+.navbtbg a{font-size:13px}
+
+.bdnav{width:954px;height:16px;line-height:16px;color:#7E817E;margin:10px auto;padding-left:10px;background:url(http://img01.51jobcdn.com/im/jobs/jt.gif) left center no-repeat}
+.bdnav a,.bdnav span{color:#266EBA}
+.bdnav span{padding:0 5px}
+
+.filter{width:962px;line-height:22px;margin:0 auto 10px;border:1px solid #D4D5D6}
+.filter .e,.filter .tp{position:relative;padding:9px 85px 9px 140px;border-top:1px dotted #BABABA}
+.filter .e p,.filter .tp p{position:absolute;height:40px;line-height:40px;left:20px;top:0}
+.filter .e strong,.filter .e b,.filter .e a,.filter .tp strong{float:left}
+.filter .e strong,.filter .tp strong{width:68px}
+.filter .cr{color:#FF9400 !important}
+.filter .e b{margin-right:5px}
+.filter .e a,.filter .tp a{color:#000;white-space:nowrap;margin-right:15px}
+.filter .e2{padding-right:20px}
+/*
+.filter .e3{padding-top:0;padding-bottom:0;border-bottom:none}
+*/
+.filter .e3{padding-right:5px}
+.filter .e3.nb{padding-top:0;border-top:none}
+.filter .e3 p{_margin-left:-140px}
+.filter .e3.nb p{top:-8px}
+.filter .e4,.filter .e5{padding-left:88px;padding-right:5px}
+.filter .e4 a,.filter .e5 a{color:#909090}
+.filter .e4 p{_margin-left:-88px}
+.filter .e5{padding-left:235px}
+.filter .e5 p{_margin-left:-235px}
+.filter .e5 strong{width:auto;font-size:14px}
+
+.filter .lkst{width:100%}
+.filter .lkst.close{height:22px;overflow:hidden}
+
+.filter .down,.filter .up{position:absolute;color:#FF9400;cursor:pointer;right:20px;top:9px;padding-right:23px;background-position:right -60px}
+.filter .up{background-position:right -80px}
+.filter .mk{font-weight:bold}
+.filter .tp{height:22px;padding:9px 20px;background-color:#F9F9F9;border-top:none}
+.filter .tp p{position:relative;float:left;min-width:110px;height:22px;line-height:22px;margin-right:10px;left:0}
+.filter .tp p .mk{color:#FF9400}
+.filter .tg{height:40px;line-height:40px;font-weight:bold;text-align:center;background-color:#F9F9F9}
+.filter .f{position:relative}
+.filter .bt{position:relative;padding:9px 20px 9px 88px}
+.filter .bt.b2{border-top:1px dotted #BABABA}
+.filter .bt strong{position:absolute;left:20px;_margin-left:-85px}
+.filter .clist{position:relative;height:auto!important;height:20px;min-height:20px;line-height:20px;margin:0 100px 10px 0}
+.filter .clist span{position:relative;float:left;height:20px;color:#FFF;white-space:nowrap;margin:0 5px 5px 0;padding:0 25px 0 5px;background-color:#FF9400}
+.filter .clist em{position:absolute;width:20px;height:20px;cursor:pointer;right:0;top:0;background-position:0 -40px}
+.filter .qx{position:absolute;width:55px;height:20px;line-height:20px;color:#FFF;right:-100px;top:0;padding-left:25px;background-color:#FF9400;background-position:5px 0}
+.filter .qx:hover{text-decoration:none}
+
+.flst .l{position:relative;float:left;width:90px;height:22px;cursor:pointer;overflow:hidden;margin-left:-1px;z-index:2}
+.flst .l a{color:#666}
+.flst .l font{display:none}
+.flst .on{overflow:visible;z-index:1}
+.flst .on font{display:block;position:absolute;width:100%;height:1px;font-size:0;left:1px;top:21px;background-color:#FFF;z-index:3}
+.flst em{position:absolute;width:20px;height:20px;right:3px;background-position:0px -140px;z-index:4}
+.flst span{position:absolute;width:78px;height:20px;line-height:20px;padding-left:10px;border:1px solid #D4D5D6;z-index:3}
+.flst .on span{z-index:1}
+.flst ul{position:absolute;top:21px;background-color:#FFF;z-index:2}
+.flst .on ul{border:1px solid #D4D5D6}
+.flst li{line-height:22px;white-space:nowrap;padding:0 10px}
+.flst .bx{width:580px}
+.flst .bx li{float:left}
+
+.mlst{width:962px;margin:0 auto 10px;border:1px solid #D4D5D6}
+.mlst .title{line-height:20px;font-size:18px;padding:10px 20px;background-color:#F9F9F9;border-bottom:1px dotted #BABABA}
+.mlst .cn{position:relative;padding:12px 20px}
+.mlst .cn p{line-height:22px}
+.mlst .name{display:inline-block;line-height:22px;font-weight:bold;font-size:14px;color:#407BD5}
+.mlst .sq,.mlst .more{position:absolute;width:94px;text-align:center;right:20px}
+.mlst .sq{width:80px;height:28px;line-height:28px;color:#FFF !important;top:34px;padding-left:14px;background-color:#FF831F}
+.mlst .sq font{position:absolute;width:20px;height:20px;left:8px;top:5px;background:url(http://img01.51jobcdn.com/im/jobs/small_icon.png) 0 -20px no-repeat}
+.mlst .more{color:#FF831F !important;text-decoration:underline;top:72px}
+.mlst .more:hover{text-decoration:none}
+
+.nrst{margin-bottom:10px;padding-top:320px;background:url(http://img01.51jobcdn.com/im/jobs/no_result.jpg) top center #F9F9F9 no-repeat}
+.nrst div{width:578px;margin:0 auto 10px}
+.nrst span{display:block;font-weight:bold;color:#3A444E;text-align:center;margin-bottom:15px;background:url(http://img01.51jobcdn.com/im/jobs/pts.jpg) center center no-repeat}
+.nrst p{float:left;width:172px;padding-left:20px}
+.nrst a{color:#407BD5}
+
+.bimf{color:#5E5E5E;margin-bottom:10px;border:1px solid #D4D5D6}
+.bimf .tword,.bimf .jnfo{padding:20px;border-bottom:1px dotted #BABABA}
+.bimf .tword.t2{padding-top:10px;border-bottom:none}
+.bimf .tword strong{color:#000}
+.bimf .mmsg{line-height:20px;padding:20px}
+.bimf .img{margin:5px 0 15px}
+.bimf .img img{float:left;margin-right:15px}
+.bimf .op{padding-top:10px}
+.bimf .op a{color:#FF831F;text-decoration:underline;margin-right:20px}
+.bimf .op a:hover,.bimf .lk .more:hover{text-decoration:none}
+.bimf .lk{padding-top:10px}
+.bimf .lk a{display:inline-block;height:20px;line-height:20px;color:#FF831F}
+.bimf .lk .sq{width:60px;color:#FFF;margin-right:10px;padding-left:25px;background:url(http://img01.51jobcdn.com/im/jobs/small_icon.png) 5px -20px #FF831F no-repeat}
+.bimf .lk .more{text-decoration:underline}
+.bimf .jnfo{line-height:22px;color:#000;padding-bottom:10px}
+.bimf .jnfo .e{float:left;width:50%;background-color:#FFF}
+.bimf .jnfo .e strong{color:#FF831F}
+.bimf .jnfo em{display:inline-block;height:20px;line-height:20px;font-style:normal;color:#FFF;margin:5px 5px 0 0;padding:0 10px;background-color:#1F9AFF}
+
+.mcon{width:964px;line-height:24px;margin:0 auto}
+
+.left{float:left;width:694px}
+.right{float:right;width:260px;overflow:hidden}
+.right .e{margin-bottom:10px}
+.right a{color:#666}
+
+.gbox{border:1px solid #D4D5D6}
+
+.comlist,.detlist{margin-bottom:10px;background-color:#FFF}
+.comlist .e{float:left;width:212px;padding:15px 0 15px 18px}
+.comlist .e a{display:inline-block;height:24px;color:#407BD5;overflow:hidden}
+.comlist .btm,.detlist .btm,.llist .btm{height:28px;padding:12px 18px;background-color:#F9F9F9;border-top:1px dotted #BABABA}
+.comlist .searchPageNav,.detlist .searchPageNav{float:left;line-height:normal}
+.comlist .tp,.detlist .tp{float:right;margin-top:2px}
+.detlist .searchPageNav{float:left;margin-right:20px}
+.searchPageNav .orange1{color:#FF7300}
+
+.detlist .e{position:relative;padding:18px 22px;border-bottom:1px dotted #BABABA}
+.detlist .e.ebtm{border-bottom:none}
+.detlist .info{height:24px;line-height:24px}
+.detlist .info a{color:#407BD5}
+.detlist .check{float:left;margin:5px 10px 0 0;*margin-top:0;margin-top:1px \9}
+.detlist .title{float:left;width:115px;height:24px;font-weight:bold;font-size:14px;margin-right:5px;overflow:hidden}
+.detlist .name{float:left;margin-right:25px}
+.detlist .location{float:left;color:#000}
+.detlist .time{float:right;color:#000}
+.detlist .order{color:#909090;padding:5px 0}
+.detlist .order span{padding:0 10px}
+.detlist .text{width:535px;height:60px;line-height:20px;color:#5E5E5E;overflow:hidden}
+.detlist .opat{position:absolute;line-height:20px;top:68px;right:22px}
+.detlist .opat a{display:inline-block;height:20px;color:#FF831F;margin-bottom:3px;padding-left:20px}
+.detlist .opat .sq{width:60px;color:#FFF;padding-left:25px;background-color:#FF831F;background-position:5px -20px}
+.detlist .sc{background-position:0 -100px}
+.detlist .fx{background-position:0 -120px}
+.detlist .op{float:left;line-height:28px}
+.detlist .op .check{float:left;margin:7px 10px 0 4px;*margin-top:2px;margin-top:3px \9}
+.detlist .op a{color:#FF831F;text-decoration:underline;margin:0 3px}
+.detlist .op a:hover{text-decoration:none}
+
+.llist{border-top-width:2px}
+.llist .e{height:28px;line-height:28px;border-top:1px dotted #BABABA}
+.llist .e span{float:left;height:28px;text-align:center;overflow:hidden}
+.llist .s1{width:200px;text-align:left !important;padding-left:20px}
+.llist .s1 a{font-weight:bold;color:#407BD5}
+.llist .s2{width:104px;color:#FF831F}
+.llist .s3{width:110px}
+.llist .s4,.llist .s5{width:82px}
+.llist .s6{width:94px}
+.llist .tp{height:40px;line-height:40px;overflow:hidden;background-color:#F9F9F9;border-top:none}
+.llist .tp span{font-size:14px;color:#000}
+.llist .tp font{float:left}
+.llist .tp .s1{width:194px}
+.llist .tp .s2{width:102px}
+.llist .tp .s3{width:100px;margin-top:10px}
+.llist .tp .s4,.llist .tp .s5{width:80px}
+.llist .tp .s6{width:80px}
+
+.mit{line-height:20px;padding:10px 22px;background-color:#FFF}
+.mit p{margin-bottom:10px}
+.mit .tn{float:left;width:160px;height:20px}
+.mit .tn a{font-weight:bold;color:#407BD5}
+.mit .sq{float:right;height:20px;color:#FF831F;text-decoration:underline}
+.mit .sq:hover,.mit .more a:hover{text-decoration:none}
+.mit .cn{display:inline-block;clear:both}
+.mit .more{color:#407BD5}
+.mit .more a{color:#407BD5;text-decoration:underline}
+
+.btitle{height:33px;line-height:33px;font-size:14px;color:#666;text-indent:20px;margin:0 2px;background:url("http://img01.51jobcdn.com/im/jobs/bg_btitle.jpg") repeat-x}
+
+.hflist{width:100%;overflow:hidden;padding:6px 0}
+.hflist span{float:left;width:50%;height:24px;text-indent:22px;overflow:hidden;background-color:#FFF}
+.hflist.h2 span{width:100%}
+.hmore{text-align:right;margin-bottom:6px;padding-right:20px;}
+
+.nlist{padding:10px 0}
+.nlist{padding-left:22px}
+.nlist li{position:relative;height:24px;padding-left:25px}
+.nlist span{position:absolute;width:14px;height:14px;text-align:center;font:11px/14px "Arial";color:#FFF;left:0;top:5px;background-color:#929292;border:1px solid #818181}
+.tyd span{background-color:#ED4138;border-color:#DB2B28}
+
+.ctnav{line-height:22px;font-size:14px;padding:10px 22px}
+.ctnav span{font-weight:bold;color:#F00}
+.ctnav a{color:#666;margin-right:10px}
+
+.box_center {text-align: center;}
+.box ul {list-style-type: none;padding:0px;width:100%;}
+.box li {padding:5px;float:left;width:170px;height:18px;word-break: break-all;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}

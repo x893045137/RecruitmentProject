@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.chinasofti.dao.RecruitMapper">
+
+	<resultMap type="Recruitinfo" id="RecruitResultMap">
+		<!-- <association property="recruitinfo" column="recruitID" javaType="Recruitinfo">
+			<id property="recruitID" column="recruitID"/>
+			<result property="job" column="job" />
+			<result property="salary" column="salary" />
+			<result property="releaseTime" column="releaseTime"/>
+		</association>
+		<association property="company" column="Membership" javaType="Company">
+			<id property="Membership" column="Membership"/>
+			<result property="companyLocation" column="companyLocation" />
+			<result property="companyName" column="companyName" />
+		</association> -->
+		<!-- <collection property="recruitinfo" ofType="Recruitinfo">			
+			<result property="job" column="job" />
+			<result property="salary" column="salary" />
+			<result property="releaseTime" column="releaseTime"/>
+		</collection>
+		<collection property="company" ofType="Company">
+			<result property="companyLocation" column="companyLocation" />
+			<result property="companyName" column="companyName" />
+		</collection> -->
+		<id property="recruitID" column="recruitID"/>
+		<result property="job" column="job" />
+		<result property="salary" column="salary" />
+		<result property="releaseTime" column="releaseTime"/>
+		<result property="companyLocation" column="companyLocation" />
+		<result property="companyName" column="companyName" />
+	</resultMap> 
+	
+	<resultMap type="Recruitinfo" id="RecruitMap">
+		<id property="recruitID" column="recruitID"/>
+		<result property="job" column="job" />
+		<result property="salary" column="salary" />
+		<result property="releaseTime" column="releaseTime"/>
+		<result property="companyLocation" column="companyLocation" />
+		<result property="companyName" column="companyName" />
+		<result property="hiring" column="hiring" />
+		<result property="companyNature" column="companyNature" />
+		<result property="companySize" column="companySize" />
+		<result property="descriptions" column="descriptions" />
+		<result property="requirement" column="requirement" />
+		<result property="jobtype" column="jobtype" />
+		<result property="welfare" column="welfare" />
+		<result property="workExperience" column="WorkExperience" />
+		<result property="recordschool" column="Recordschool" />
+		
+		
+	</resultMap>
+	
+	<select id="selectAllRecruit"  resultMap="RecruitResultMap"  parameterType="java.lang.Integer">
+		SELECT recruitinfo.recruitID,recruitinfo.job ,recruitinfo.companyName ,recruitinfo.companyLocation ,recruitinfo.salary,recruitinfo.ReleaseTime 
+		from recruitinfo  LIMIT #{0},#{1} 
+	</select>	
+	
+		<select id="selectRecruit"  resultMap="RecruitResultMap" >
+		SELECT recruitinfo.recruitID,recruitinfo.job ,recruitinfo.companyName ,recruitinfo.companyLocation ,recruitinfo.salary,recruitinfo.ReleaseTime 
+		from recruitinfo 
+	</select>	
+	
+	<!--  parameterType="com.chinasofti.model.Recruitinfo" -->
+	
+	
+	<select id="selectRecruits" resultMap="RecruitResultMap" >
+		select * from (SELECT recruitinfo.recruitID,recruitinfo.job ,recruitinfo.companyName ,recruitinfo.companyLocation ,recruitinfo.salary,recruitinfo.ReleaseTime 
+		from recruitinfo where
+			   salary like  CONCAT(CONCAT('%', #{recruit.salary}), '%') 
+		and companyNature like CONCAT(CONCAT('%', #{recruit.companyNature}), '%')
+		and WorkExperience like CONCAT(CONCAT('%', #{recruit.workExperience}), '%')
+		and  Recordschool like CONCAT(CONCAT('%', #{recruit.recordschool}), '%') 
+		and companySize like CONCAT(CONCAT('%', #{recruit.companySize}), '%')
+		and companyLocation like  CONCAT(CONCAT('%', #{recruit.companyLocation}), '%')
+		and welfare like CONCAT(CONCAT('%', #{recruit.welfare}), '%')
+		and worktype like CONCAT(CONCAT('%', #{recruit.worktype}), '%')
+		) e LIMIT #{currage},#{page} 
+	</select>
+	
+	<select id = "selectAllRecruits" resultMap="RecruitResultMap" >
+		SELECT recruitinfo.recruitID,recruitinfo.job ,recruitinfo.companyName ,recruitinfo.companyLocation ,recruitinfo.salary,recruitinfo.ReleaseTime 
+		from recruitinfo where
+			   salary like  CONCAT(CONCAT('%', #{recruit.salary}), '%') 
+		and companyNature like CONCAT(CONCAT('%', #{recruit.companyNature}), '%')
+		and WorkExperience like CONCAT(CONCAT('%', #{recruit.workExperience}), '%')
+		and Recordschool like CONCAT(CONCAT('%', #{recruit.recordschool}), '%')
+		and companySize like CONCAT(CONCAT('%', #{recruit.companySize}), '%')
+		and companyLocation like  CONCAT(CONCAT('%', #{recruit.companyLocation}), '%')
+		and welfare like CONCAT(CONCAT('%', #{recruit.welfare}), '%')
+		and worktype like CONCAT(CONCAT('%', #{recruit.worktype}), '%')
+	</select>
+	
+	<select id="selectRecruitment"  parameterType="java.lang.String" resultMap="RecruitMap">
+		select * from Recruitinfo where recruitID = #{0}
+	</select>
+	
+	<select id = "selectLikeRecruit" resultMap="RecruitResultMap">
+		SELECT recruitinfo.recruitID,recruitinfo.job ,recruitinfo.companyName ,recruitinfo.companyLocation ,recruitinfo.salary,recruitinfo.ReleaseTime 
+		from recruitinfo where
+			   salary like  CONCAT(CONCAT('%', #{recruit.salary}), '%') 
+			   and companyLocation like  CONCAT(CONCAT('%', #{recruit.companyLocation}), '%')
+			   and jobtype like  CONCAT(CONCAT('%', #{recruit.jobtype}), '%')
+			   and recruitID != #{recruit.recruitID}
+	</select>
+
+</mapper>

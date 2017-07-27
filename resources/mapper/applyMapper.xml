@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.chinasofti.dao.ApplyMapper">
+	<resultMap type="Apply" id="ApplyResultMap">
+	
+	</resultMap>
+	
+	<insert id="applyCompany" parameterType="java.lang.String">
+		insert into apply values(#{0},#{1},#{2})
+	</insert>
+	
+	<select id="selectApply" resultType="java.lang.String" parameterType="java.lang.String">
+		select userid from apply where recruitID = #{0}
+	</select>
+	
+	<select id="selectRecruitID" resultType="java.lang.String" parameterType="java.lang.String">
+		select recruitID from apply where userid = #{0}
+	</select>
+	
+
+
+</mapper>

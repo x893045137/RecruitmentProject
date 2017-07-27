@@ -56,11 +56,10 @@
                                     </p>                                             
                 			<span class="l">|</span>
                 <ul>               	
-                    <li class="tle"><span><a href="pindex.jsp?lang=c">我的51Job</a><em class="icon_arrow"></em></span></li>
+                    <li class="tle"><span><a href="Myjob.action?userid=${consumer.id }">我的51Job</a><em class="icon_arrow"></em></span></li>
                     <li class="e1 e_icon"><a href="description.jsp?lang=c">简历中心</a></li>
                     <li class="e2 e_icon"><a href="resume_browsed.jsp?lang=c">谁看过我</a></li>
-                    <li class="e3 e_icon"><a href="my_collection.jsp?lang=c">我的收藏</a></li>
-                    <li class="e4 e_icon "><a href="my_apply.jsp?lang=c">我的申请</a></li>
+                    <li class="e4 e_icon "><a href="selectApply.action?userid=${consumer.id }">我的申请</a></li>
                     <li class="e6 e_icon last"><a href="#">退出帐号</a></li>
                                     </ul>
            		 </div>             		
@@ -135,7 +134,7 @@
             
 <p class="nlink">
     <a class="" href="index.jsp">首页</a>
-    <a class="" href="search_result.jsp">职位搜索</a>
+    <a class="" href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">职位搜索</a>
     <a class="" href="javascript:openAreaChannelLayer();">地区频道</a>
     <a class="" href="http://www.51job.com/default_res.php">职场资讯</a>
     <a class="" href="http://xy.51job.com/default-xs.php">校园招聘</a>
@@ -148,11 +147,10 @@
             	<div class="content">
 
 		<div class="exlt">
-    <a track-type="trackIndexClick" event-type="28" href="pindex.jsp" class="on"><span>我的51Job</span></a>
+    <a track-type="trackIndexClick" event-type="28" href="Myjob.action?userid=${consumer.id }" class="on"><span>我的51Job</span></a>
     <a track-type="trackIndexClick" event-type="29" href="description.jsp" class=""><span>简历中心</span></a>
     <a track-type="trackIndexClick" event-type="30" href="resume_browsed.jsp?lang=c" class=""><span>谁看过我</span></a>
-    <a track-type="trackIndexClick" event-type="31" href="my_collection.jsp?lang=c" class=""><span>我的收藏</span></a>
-    <a track-type="trackIndexClick" event-type="32" href="my_apply.jsp?lang=c" class=""><span>我的申请<em class="new"></em></span></a>    
+    <a track-type="trackIndexClick" event-type="32" href="selectApply.action?userid=${consumer.id }" class=""><span>我的申请<em class="new"></em></span></a>    
 </div>
 <script>
     $('.mbtn').click(function() {
@@ -177,12 +175,9 @@
                                 <img src="http://images.51job.com/im/2016/resume/man.png" alt="头像" width="85" height="104">
                                 <a class="a" track-type="trackButtonClick" event-type="1" href="description.jsp?lang=c">设置</a>
                                 <div class="rcon">
-                                    <div class="h1 e2"><a href="javascript:void(0);" title="我的简历1" onclick="edit(354961236,0,'http://i.51job.com/resume')">我的简历1</a><em class="td">快速投递</em><em class="gk">对所有公开</em></div>
-                                    <div class="e">
-                                        <label>更新：</label>
-                                        <span class="refreshdate" id="refreshdate_354961236">2017-07-17</span>
-                                    </div>
-                                    <div class="r1"><span title="缪晓磊&nbsp;&nbsp;|&nbsp;&nbsp;男&nbsp;&nbsp;|&nbsp;&nbsp;23岁&nbsp;&nbsp;|&nbsp;&nbsp;暂无经验&nbsp;&nbsp;|&nbsp;&nbsp;现居住上海">缪晓磊&nbsp;&nbsp;|&nbsp;&nbsp;男&nbsp;&nbsp;|&nbsp;&nbsp;23岁&nbsp;&nbsp;|&nbsp;&nbsp;暂无经验&nbsp;&nbsp;|&nbsp;&nbsp;现居住上海</span></div>
+                                    <div class="h1 e2"><a href="javascript:void(0);" title="我的简历1" onclick="edit(354961236,0,'http://i.51job.com/resume')">我的简历1</a></div>
+                                    
+                                    <div class="r1"><span title="">缪晓磊&nbsp;&nbsp;|&nbsp;&nbsp;男&nbsp;&nbsp;|&nbsp;&nbsp;23岁&nbsp;&nbsp;|&nbsp;&nbsp;暂无经验&nbsp;&nbsp;|&nbsp;&nbsp;现居住上海</span></div>
                                                                         
                                 </div>
                                 <div class="btnbox">
@@ -201,13 +196,13 @@
                 </div>
                 <div class="rsee clearfix">
                     <div class="rsl"><a track-type="trackButtonClick" event-type="4" href="http://i.51job.com/userset/resume_browsed.php?lang=c">谁看过我 <span class="c_orange">2</span></a></div>
-                    <div class="rsl r1"><a track-type="trackButtonClick" event-type="5" href="http://i.51job.com/userset/my_apply.php?lang=c">我的申请 <span class="c_orange">1</span></a></div>
-                    <div class="rsl r2"><a track-type="trackButtonClick" event-type="6" href="http://i.51job.com/userset/my_collection.php?lang=c">我的收藏 <span class="c_orange" id="my_collection_num">1</span></a></div>
+                    <div class="rsl r1"><a track-type="trackButtonClick" event-type="5" href="selectApply.action?userid=${consumer.id }">我的申请 <span class="c_orange">${size }</span></a></div>
+                    
                 </div>
             								
 				<div class="rex"></div>
 			</div>
-            <div class="ebox">                        
+<!-- <div class="ebox">                        
                                                                                 
                     <div class="e_tit"><a class="a" track-type="trackButtonClick" event-type="15" href="http://i.51job.com/userset/resume_browsed.php?lang=c">更多</a>谁看过我<span class="c_999 f12">（近60天内简历被浏览<span class="c_orange">2</span>次，浏览公司<span class="c_orange">2</span>家）</span></div>
                                         
@@ -217,7 +212,7 @@
                                 <div class="h2"><p title="民营公司&nbsp;&nbsp;|&nbsp;&nbsp;少于50人&nbsp;&nbsp;|&nbsp;&nbsp;计算机软件">民营公司&nbsp;&nbsp;|&nbsp;&nbsp;少于50人&nbsp;&nbsp;|&nbsp;&nbsp;计算机软件</p><label><span>浏览(筛选中)：</span><span title="我的简历1">我的简历1</span></label></div>
                             </div>
                         </div>                    	                                     
-            </div>
+            </div> -->
 			
 		</div>
         <div class="clear"></div>

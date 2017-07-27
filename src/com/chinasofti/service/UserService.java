@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.chinasofti.model.User;
 
+@Service
 public interface UserService {
 
 	// 管理员登录

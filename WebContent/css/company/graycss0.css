@@ -1,0 +1,417 @@
+@CHARSET "UTF-8";
+/* CSS Document */
+.affiche_l{
+	float:left;
+	width:632px;
+	margin:0 10px 0 0;
+	background:url(http://img01.51jobcdn.com/im/2009/my/affiche_bg.gif) no-repeat;
+	background-position:0 50%;
+	height:54px;
+	padding:0 0 0 160px;
+	line-height:54px;
+	}
+.affiche_l img{
+margin-top:21px;
+*margin-top:0px;
+_margin-top:21px;
+}
+.affiche_le{
+	float:left;
+	width:632px;
+	margin:0 10px 0 0;
+	background:url(http://img01.51jobcdn.com/im/2009/emy/affiche_bg.gif) no-repeat;
+	background-position:0 50%;
+	height:54px;
+	padding:0 0 0 160px;
+	line-height:54px;
+	}
+.affiche_le img{
+margin-top:21px;
+*margin-top:0px;
+_margin-top:21px;
+}
+.my_graybox,.my_graybox i,.my_graybox i i,.my_graybox b,.my_graybox i i{
+	background:url(http://img01.51jobcdn.com/im/2009/my/graybox_bg.png) no-repeat;
+}
+.graybox_con{
+	margin:-7px 0 0px  0;
+	padding:0px;
+	border-right:#E7E7E7 solid 1px;	
+	}
+*html .graybox_con{
+	border-right:#dadada solid 1px;
+	margin:-10px 0 -10px  0;
+	padding:0px;	
+	}
+.my_graybox {
+	position:relative;
+	background-position:0 0;
+	text-align:left;
+	margin:10px auto;
+	width:100%;
+}
+.my_graybox i {
+	display:block;
+	height:40px;
+}
+
+.my_graybox i i {
+	margin:0 0 0 8px;
+	background-position:right 0;
+}
+.my_graybox b {
+	display:block;
+	height:8px;
+	background-position:0 bottom;
+}
+.my_graybox b b {
+	margin:0 0 0 8px;
+	background-position:right bottom;
+}
+#operate .line{
+	background:#f6f6f6;
+	height:24px;
+	line-height:24px;
+	border-top:#FBFBFB solid 1px;
+	}
+.iconclose{
+	float:right; 
+	margin:-12px 0px 0 0;
+	}
+.my_title{
+	text-align:left;
+	font-size:12px;
+	font-weight:bold;
+	color:#FF7300;
+	margin:-25px 0 0px 0px;
+	background:url(http://img01.51jobcdn.com/im/2009/my/graybox_bg.png) no-repeat;
+	background-position:0 0;
+	text-indent:85px;
+	height:40px;
+	line-height:40px;
+	padding:3px 0 0 0;
+	position:absolute;
+	top:25px;
+	left:0px;
+	width:97%;
+}
+.my_title01{
+	text-align:left;
+	font-size:12px;
+	font-weight:bold;
+	color:#FF7300;
+	margin:-25px 0 0px 0px;
+	background:url(http://img01.51jobcdn.com/im/2009/my/graybox_bg.png) no-repeat;
+	background-position:0 0;
+	text-indent:85px;
+	height:40px;
+	line-height:40px;
+	padding:3px 0 0 0;
+	position:absolute;
+	top:25px;
+	left:0px;
+	width:97%;
+}
+.my_title02{
+	text-align:left;
+	font-size:12px;
+	font-weight:bold;
+	color:#FF7300;
+	margin:-25px 0 0px 0px;
+	background:url(http://img01.51jobcdn.com/im/2009/my/graybox_bg.png) no-repeat;
+	background-position:0 0;
+	text-indent:85px;
+	height:40px;
+	line-height:40px;
+	padding:3px 0 0 0;
+	position:absolute;
+	top:25px;
+	left:0px;
+	width:97%;
+}
+.my_record{
+	width:98%;
+	line-height:22px;
+	padding:1px;
+	margin:10px auto 10px;
+	}
+.my_lab_table{
+	margin:0 0 0px 10px;
+	padding:0px;
+	}
+*html .my_lab_table{
+	margin:2px 0 -2px 10px;
+	padding:0px;
+	}
+.my_record_wbg{
+	background:url(http://img01.51jobcdn.com/im/2009/my/record_w_bg.gif) no-repeat;
+	background-position:center;
+	height:73px;
+	}
+.my_record_wbg02{
+	background:url(http://img01.51jobcdn.com/im/2009/my/favorite_w_bg.gif) no-repeat;
+	background-position:left 50%;
+	height:89px;
+	padding-left:10px;
+	}
+	
+/* New Style */	
+.remove {
+	background:url(http://img01.51jobcdn.com/im/2009/my/btn_close03.gif) 0 1px no-repeat;
+	display:block;
+	width:10px;
+	height:10px;
+	float:left;
+}
+.reflesh001 {
+	background:url(http://img01.51jobcdn.com/im/2009/my/icon_refurbish03.gif) 0 0 no-repeat;;
+	display:block;
+	width:15px;
+	height:10px;
+	float:left;
+}
+.newsearchrecent {
+	color:#ff7300;
+}
+a.moregogo:link {
+  font-size: 12px;
+  color: #ff7300;
+  text-decoration: none;
+}
+a.moregogo:visited {
+  font-size: 12px;
+  color: #ff7300;
+  text-decoration: none;
+}
+a.moregogo:hover {
+  font-size: 12px;
+  color: #ff7300;
+  text-decoration: underline;
+}
+.color_new {
+	color: #ff7300;
+}
+.infomodify {
+	background:url(http://img01.51jobcdn.com/im/2009/my/icon_pen.gif) 0 0 no-repeat;
+	color: #ff7300;
+	padding-left:16px;
+}
+
+/* Icon Style */
+.neweditbg {
+	background:url(http://img01.51jobcdn.com/im/2009/my/folder/icon_amend.gif) 0 0 no-repeat;
+	display:block;
+	width:20px;
+	height:18px;
+	float:left;
+	margin:0 4px 0 0;
+}
+.newcheckbg {
+	background:url(http://img01.51jobcdn.com/im/2009/my/folder/icon_check.gif) 0 0 no-repeat;
+	display:block;
+	width:20px;
+	height:18px;
+	float:left;
+	margin:0 4px 0 0;
+}
+.newrefurbishbg {
+	background:url(http://img01.51jobcdn.com/im/2009/my/folder/icon_refurbish.gif) 0 0 no-repeat;
+	display:block;
+	width:20px;
+	height:18px;
+	float:left;
+	margin:0 4px 0 0;
+}
+.newpublishbg0 {
+	background:url(http://img01.51jobcdn.com/im/2009/my/folder/icon_publish0.gif) 0 0 no-repeat;
+	display:block;
+	width:20px;
+	height:18px;
+	float:left;
+}
+.newpublishbg2 {
+	background:url(http://img01.51jobcdn.com/im/2009/my/folder/icon_publish2.gif) 0 0 no-repeat;
+	display:block;
+	width:20px;
+	height:18px;
+	float:left;
+}
+.newpublishbg3 {
+	background:url(http://img01.51jobcdn.com/im/2009/my/folder/icon_publish3.gif) 0 0 no-repeat;
+	display:block;
+	width:20px;
+	height:18px;
+	float:left;
+}
+
+/* Setting Style */
+.userstyle_new {
+	background:url(http://img01.51jobcdn.com/im/2009/my/icon10.gif) 6px 0 no-repeat;
+	width:30px;
+	height:30px;
+	display:block;
+	margin:0 0 7px 0;
+}
+.usersetting_new {
+	background:url(http://img01.51jobcdn.com/im/2009/my/icon11.gif) 0 0 no-repeat;
+	width:30px;
+	height:30px;
+	display:block;
+	margin:0 0 7px 0;
+}
+.userhelp_new {
+	background:url(http://img01.51jobcdn.com/im/2009/my/icon12.gif) 0 0 no-repeat;
+	width:30px;
+	height:30px;
+	display:block;
+	margin:0 0 7px 0;
+}
+.userout_new {
+	background:url(http://img01.51jobcdn.com/im/2009/my/icon13.gif) 0 0 no-repeat;
+	width:30px;
+	height:30px;
+	display:block;
+	margin:0 0 7px 0;
+}
+.settingbg {
+	background:url(http://img01.51jobcdn.com/im/2009/my/icon_bg.gif) 0 0 no-repeat;
+}
+
+/* Button Style */
+.floatnew {
+	float:left;
+}
+.newamendbg {
+	background:url(http://img01.51jobcdn.com/im/2009/my/btn_amend.gif) 0 0 no-repeat;
+	display:block;
+	width:77px;
+	height:29px;
+	float:left;
+}
+.newrefurbish1bg {
+	background:url(http://img01.51jobcdn.com/im/2009/my/btn_refurbish.gif) 0 0 no-repeat;
+	display:block;
+	width:77px;
+	height:29px;
+	float:left;
+}
+.newstandardbg {
+	background:url(http://img01.51jobcdn.com/im/2009/my/btn_standard_resume.gif) 0 0 no-repeat;
+	display:block;
+	width:103px;
+	height:33px;
+}
+.newstudentbg {
+	background:url(http://img01.51jobcdn.com/im/2009/my/btn_student_resume.gif) 0 0 no-repeat;
+	display:block;
+	width:118px;
+	height:33px;
+}
+.newpasterbg {
+	background:url(http://img01.51jobcdn.com/im/2009/my/btn_plaster_resume.gif) 0 0 no-repeat;
+	display:block;
+	width:81px;
+	height:33px;
+}
+.newdirectionbg {
+	background:url(http://img01.51jobcdn.com/im/2009/my/btn_direction.gif) 0 0 no-repeat;
+	display:block;
+	width:81px;
+	height:33px;
+}
+/* Nav Lab Style */
+.shezhaoon {
+	background:url(http://img01.51jobcdn.com/im/2009/my/nav_lab01.gif) 0 0 no-repeat;
+	width:71px;
+	height:22px;
+	cursor:pointer;
+	display:block;
+}
+.shezhaooff {
+	background:url(http://img01.51jobcdn.com/im/2009/my/nav_lab01_h.gif) 0 0 no-repeat;
+	width:71px;
+	height:22px;
+	cursor:pointer;
+	display:block;
+}
+.xiaozhaoon {
+	background:url(http://img01.51jobcdn.com/im/2009/my/nav_lab02.gif) 0 0 no-repeat;
+	width:71px;
+	height:22px;
+	cursor:pointer;
+	display:block;
+}
+.xiaozhaooff {
+	background:url(http://img01.51jobcdn.com/im/2009/my/nav_lab02_h.gif) 0 0 no-repeat;
+	width:71px;
+	height:22px;
+	cursor:pointer;
+	display:block;
+}
+.bianjion {
+	background:url(http://img01.51jobcdn.com/im/2009/my/nav_lab04.gif) 0 0 no-repeat;
+	width:71px;
+	height:22px;
+	cursor:pointer;
+	display:block;
+}
+.bianjioff {
+	background:url(http://img01.51jobcdn.com/im/2009/my/nav_lab04_h.gif) 0 0 no-repeat;
+	width:71px;
+	height:22px;
+	cursor:pointer;
+	display:block;
+}
+.zixunon {
+	background:url(http://img01.51jobcdn.com/im/2009/my/nav_lab05.gif) 0 0 no-repeat;
+	width:71px;
+	height:22px;
+	cursor:pointer;
+	display:block;
+}
+.zixunoff {
+	background:url(http://img01.51jobcdn.com/im/2009/my/nav_lab05_h.gif) 0 0 no-repeat;
+	width:71px;
+	height:22px;
+	cursor:pointer;
+	display:block;
+}
+.bbsnewon {
+	background:url(http://img01.51jobcdn.com/im/2009/my/nav_lab06.gif) 0 0 no-repeat;
+	width:71px;
+	height:22px;
+	cursor:pointer;
+	display:block;
+}
+.bbsnewoff {
+	background:url(http://img01.51jobcdn.com/im/2009/my/nav_lab06_h.gif) 0 0 no-repeat;
+	width:71px;
+	height:22px;
+	cursor:pointer;
+	display:block;
+}
+.bbsfavon {
+	background:url(http://img01.51jobcdn.com/im/2009/my/nav_lab07.gif) 0 0 no-repeat;
+	width:71px;
+	height:22px;
+	cursor:pointer;
+	display:block;
+}
+.bbsfavoff {
+	background:url(http://img01.51jobcdn.com/im/2009/my/nav_lab07_h.gif) 0 0 no-repeat;
+	width:71px;
+	height:22px;
+	cursor:pointer;
+	display:block;
+}
+
+/**
+职位页面举报弹出层css  
+add by limingzhan 20120524
+**/
+
+.table_report{ margin-top:20px; font-size:12px;}
+.shuiming{ width:400px; height:70px;margin-left:5px;font-size:12px;}
+.color_c{ color:#ccc;padding-left:5px;}
+.textfield{ width:200px; height:16px;margin-left:5px;}
+.color_6{ color:#666;padding-left:5px;}

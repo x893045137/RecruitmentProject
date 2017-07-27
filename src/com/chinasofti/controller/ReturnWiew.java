@@ -1,15 +1,18 @@
 package com.chinasofti.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.chinasofti.model.User;
+import com.chinasofti.model.Recruitinfo;
 
 /*
  * 页面跳转
@@ -33,4 +36,18 @@ public class ReturnWiew {
 		return new ModelAndView("index-register");
 	}
 	
+	@RequestMapping("/jsp/entrance.action")
+	public ModelAndView entrance(@ModelAttribute("recruit") Recruitinfo recruit,HttpServletRequest request,HttpServletResponse response){
+		HttpSession session = request.getSession();		
+		session.setAttribute("salary", recruit.getSalary());
+		session.setAttribute("companyNature", recruit.getCompanyNature());
+		session.setAttribute("WorkExperience", recruit.getWorkExperience());
+		session.setAttribute("Recordschool", recruit.getRecordschool());
+		session.setAttribute("companySize", recruit.getCompanySize());
+		session.setAttribute("companyLocation", recruit.getCompanyLocation());
+		session.setAttribute("welfare", recruit.getWelfare());
+		session.setAttribute("worktype", recruit.getWorktype());
+		
+		return new ModelAndView("index");
+	}
 }
