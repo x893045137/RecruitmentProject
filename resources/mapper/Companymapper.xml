@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinasofti.dao.CompanyMapper">
+	<resultMap type="Company" id="CompanyResultMap">
+		<id column="membership" property="membership" />
+		<result column="companyName" property="companyName" />
+		<result column="companyLocation" property="companyLocation" />
+		<result column="companyNature" property="companyNature" />
+		<result column="companySize" property="companySize" />
+	</resultMap>
+
+	<resultMap type="Recruitinfo" id="RecruitMap">
+		<id property="recruitID" column="recruitID" />
+		<result property="job" column="job" />
+		<result property="salary" column="salary" />
+		<result property="releaseTime" column="releaseTime" />
+		<result property="companyLocation" column="companyLocation" />
+		<result property="companyName" column="companyName" />
+		<result property="hiring" column="hiring" />
+		<result property="companyNature" column="companyNature" />
+		<result property="companySize" column="companySize" />
+		<result property="descriptions" column="descriptions" />
+		<result property="requirement" column="requirement" />
+		<result property="jobtype" column="jobtype" />
+		<result property="welfare" column="welfare" />
+		<result property="workExperience" column="WorkExperience" />
+		<result property="recordschool" column="Recordschool" />
+		<result property="membership" column="Membership" />
+	</resultMap>
+	<!-- 查询企业基本信息 -->
+	<select id="selectCompany" parameterType="com.chinasofti.model.Company"
+		resultMap="CompanyResultMap">
+		select * from company
+		<where>
+			membership="上海玺卷"
+		</where>
+	</select>
+	<select id="selectRecruitinfo" parameterType="com.chinasofti.model.Recruitinfo"
+		resultMap="RecruitMap">
+		select * from recruitinfo
+		<where>
+			Membership="上海玺卷"
+		</where>
+	</select>
+	<insert id="insertRecruitinfo" parameterType="com.chinasofti.model.Recruitinfo">
+		insert into recruitinfo(
+		job,
+		salary,
+		releaseTime,
+		companyLocation,
+		companyName,
+		hiring,
+		companyNature,
+		companySize,
+		descriptions,
+		requirement,
+		jobtype,
+		welfare,
+		WorkExperience,
+		Recordschool,
+		)values
+		<trim prefix="(" suffix=")" prefixOverrides=",">
+			<if test="null != job and '' !=job">
+				#{job},
+			</if>
+			<if test="null != salary and '' !=salary">
+				#{salary},
+			</if>
+			<if test="null != releaseTime and '' != releaseTime">
+				#{releaseTime},
+			</if>
+			<if test="null != companyLocation and '' !=companyLocation">
+				#{companyLocation},
+			</if>
+			<if test="null != companyName and '' !=companyName">
+				#{companyName},
+			</if>
+			<if test="null != hiring and '' != hiring">
+				#{hiring},
+			</if>
+			<if test="null != companyNature and '' !=companyNature">
+				#{companyNature},
+			</if>
+			<if test="null !=companySize and '' !=companySize">
+				#{companySize},
+			</if>
+			<if test="null != descriptions and '' !=descriptions">
+				#{descriptions},
+			</if>
+			<if test="null != requirement and '' !=requirement">
+				#{requirement},
+			</if>
+			<if test="null != jobtype and '' !=jobtype">
+				#{jobtype},
+			</if>
+			<if test="null != welfares and '' != welfare">
+				#{welfare],
+			</if>
+			<if test="null != workExperience and '' != workExperience">
+				#{workExperience},
+			</if>
+			<if test="null != recordschool and '' != recordschool">
+				#{recordschool},
+			</if>
+		</trim>
+	</insert>
+</mapper>

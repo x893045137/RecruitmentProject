@@ -4,13 +4,14 @@ import java.util.Date;
 
 /**
  * 招聘基本信息
+ * 
  * @author mxl
  *
  */
 public class Recruitinfo {
-	
+
 	private String recruitinfoID;
-	
+
 	public String getRecruitinfoID() {
 		return recruitinfoID;
 	}
@@ -20,39 +21,39 @@ public class Recruitinfo {
 	}
 
 	private String recruitID; // 招聘ID
-	
-	private String job; //招聘职位
-	
-	private String workExperience;//工作经验
-	
-	private String salary;//月薪
-	
-	private String welfare;//福利
-	
-	private String	hiring;//招聘人数
-	
-	private String recordschool;//学历
-	
-	private String  membership;//会员号
-	
-	private Date ReleaseTime;//发布时间
-	
-	private String companyName; //公司名
-	
-	private String companyLocation; //公司地点
-	
-	private String companyNature; //公司性质
-	
-	private String companySize; //公司规模
-	
-	private String worktype; //工作类型
-	
-	private String descriptions;//岗位描述
-	
-	private String requirement;//任职要求
-	
-	private String jobtype;//职业类型
-	
+
+	private String job; // 招聘职位
+
+	private String workExperience;// 工作经验
+
+	private String salary;// 月薪
+
+	private String welfare;// 福利
+
+	private String hiring;// 招聘人数
+
+	private String recordschool;// 学历
+
+	private String membership;// 会员号
+
+	private Date ReleaseTime;// 发布时间
+
+	private String companyName; // 公司名
+
+	private String companyLocation; // 公司地点
+
+	private String companyNature; // 公司性质
+
+	private String companySize; // 公司规模
+
+	private String worktype; // 工作类型
+
+	private String descriptions;// 岗位描述
+
+	private String requirement;// 任职要求
+
+	private String jobtype;// 职业类型
+
 	private String date;
 
 	public String getRecruitID() {
@@ -225,8 +226,13 @@ public class Recruitinfo {
 		this.date = date;
 	}
 
+	public Recruitinfo(String recruitID) {
+		super();
+		this.recruitID = recruitID;
+	}
+
 	public Recruitinfo() {
-		
+
 	}
 
 	@Override
@@ -239,12 +245,5 @@ public class Recruitinfo {
 				+ ", descriptions=" + descriptions + ", requirement=" + requirement + ", jobtype=" + jobtype + ", date="
 				+ date + "]";
 	}
-
-	
-	
-	
-	
-
-	
 
 }

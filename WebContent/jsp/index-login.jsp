@@ -87,10 +87,10 @@
 						<div class="c-lrtop"></div>
 						<div class="c-lrlogin">
 							<div class="c-lrtopt">
-								<div class="errbox" style="display:"><span class="err" id="account_err"></span>${message }<span style="display:none" id="seekpwd">
+								<div class="errbox" ><span class="err" id="account_err"></span><span style="display:none" id="seekpwd">${message }</span>
 								用户登录	
 								<span style="float: right; font-size: 14px;margin-top: 8px;"><a id="enter-login" href="#">企业登录</a></span>
-							</div>
+								</div>
 							<form id="userloginform" action="userlogin.action" method="post">
 								<div class="c-lrform">
 									<div class="c-lrinline">
@@ -115,7 +115,8 @@
 							</form>
 						</div>
 					</div>
-					<div class="c-loginright" id="qiyelogin" style="display: none;">
+					
+					<div class="c-loginright" id="qiyelogin">
 						<div class="c-lrtop"></div>
 						<div class="c-lrlogin">
 							<div class="c-lrtopt">

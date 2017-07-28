@@ -118,8 +118,11 @@ body{min-width:1000px;font-family:"Microsoft YaHei";}
 #content .c-resumeright .c-qybasic .c-qytext1 .c-qylabel1{width:20%;float: left;text-align: center;}
 #content .c-resumeright .c-qybasic .c-qytext1 .c-qylabel1 .c-qygai{width:100px;height:40px;float: right;margin:15px 50px 0 0;background:#337AB7 ;text-align: center;color:#fff;border-radius:5px;line-height: 40px;}
 #content .c-resumeright .c-qybasic .c-qytext1 .c-qylabel1 .c-qygai:hover{background:#ff9f20;}
+#content .c-resumeright .c-qybasic .c-qytext1.c-qytext2{width:50%;}
+#content .c-resumeright .c-qybasic .c-qytext1 span.c-qyspan1{width:25%;float: left;}
 #content .c-resumeright .c-qybasic input{border:none;}
 #content .c-resumeright .c-qybasic .c-qyinput1{width:70%;float: left;height:36px;margin: 7px 0;border-radius: 5px;border:1px solid #ddd;text-indent: 12px;font-size: 14px;color:#666;}
+#content .c-resumeright .c-qybasic .c-qyinput1.c-qyinput3{width:60%;}
 #content .c-resumeright .c-qybasic .c-qyinput2{width:100px;height:40px;background: #337ab7;margin:15px 50px ;color:#fff;font-size: 16px;letter-spacing: 2px;border-radius: 5px;line-height: 40px;}
 #content .c-resumeright .c-qybasic .c-qyinput2:hover{background: #ff9f20;}
 

@@ -26,10 +26,10 @@
 			<div class="wd">
 				<div class="headsy">
 					<div class="head-logo">
-						<a href="#"> <img src="img/logo.png" alt="前程无忧" /></a>
+						<a href="#"> <img src="../img/logo.png" alt="前程无忧" /></a>
 					</div>
 					<div class="head-logotxt">
-						<img src="img/slogen.png" alt="" />
+						<img src="../img/slogen.png" alt="" />
 					</div>
 					<div class="head-right">
 						<a class="head-ss" href="./index.jsp">首页</a>
@@ -44,10 +44,10 @@
 					<div class="c-resumesume">
 						<ul class="nav nav-pills nav-stacked">
 							<li class="active">
-								<a href="javascript:void(0)">基本信息</a>
+								<a href="selectCompany.action" >基本信息</a>
 							</li>
 							<li>
-								<a href="javascript:void(0)">基本信息</a>
+								<a href="slectRecruitinfo.action">发布招聘</a>
 							</li>
 							<li>
 								<a href="javascript:void(0)">基本信息</a>
@@ -59,26 +59,26 @@
 					<div class="c-qybasic" id="c-qybasic1">
 						<div class="c-qytext1">
 							<label class="c-qylabel1">公司名称：</label>
-							<span></span>
+							<span>${list[0].companyName}</span>
 						</div>
 						<div class="c-qytext1">
 							<label class="c-qylabel1">公司简称：</label>
-							<span></span>
+							<span>${list[0].membership}</span>
 						</div>
 						<div class="c-qytext1">
 							<label class="c-qylabel1">地 &nbsp;&nbsp;&nbsp;&nbsp; 址：</label>
-							<span></span>
+							<span>${list[0].companyLocation}</span>
 						</div>
-						<div class="c-qytext1">
-							<label class="c-qylabel1">公司性质：</label>
-							<span></span>
+						<div class="c-qytext1 c-qytext2">
+							<label class="c-qylabel1" style="width:38%;">公司性质：</label>
+							<span>${list[0].companyNature}</span>
 						</div>
-						<div class="c-qytext1">
-							<label class="c-qylabel1">规 &nbsp;&nbsp;&nbsp;&nbsp; 模：</label>
-							<span></span>
+						<div class="c-qytext1 c-qytext2">
+							<label class="c-qylabel1" style="width:38%;">规 &nbsp;&nbsp;&nbsp;&nbsp; 模：</label>
+							<span>${list[0].companySize}</span>
 						</div>
 						<div class="c-qytext1" style="border:none">
-							<label class="c-qylabel1" style="width:100%;text-align: right;"><a class="c-qygai" href="javascript:void(0)" onclick="cqygai()">修改信息</a></label>
+							<label class="c-qylabel1" style="width:100%;text-align: right;"><a class="c-qygai" href="javascript:void(0)" onclick="cqygai()">完善信息</a></label>
 						</div>
 					</div>
 					<div class="c-qybasic" id="c-qybasic2" style="display: none;">

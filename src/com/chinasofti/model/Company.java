@@ -1,82 +1,62 @@
 package com.chinasofti.model;
 
-
-/**
- * 公司表
- * @author mxl
- *
- */
 public class Company {
+	//公司简称
+	private String membership;
+	//公司名称
+	private String companyName;
+	//公司地址
+	private String companyLocation;
+	//公司性质
+	private String companyNature;
+	//公司规模
+	private String companySize;
 	
-	private String Membership; //会员号
-	
-	private String companyName; //公司名
-	
-	private String companyLocation; //公司地点
-	
-	private String companyNature; //公司性质
-	
-	private String companySize; //公司规模
-
 	public String getMembership() {
-		return Membership;
+		return membership;
 	}
-
 	public void setMembership(String membership) {
-		Membership = membership;
+		this.membership = membership;
 	}
-
 	public String getCompanyName() {
 		return companyName;
 	}
-
 	public void setCompanyName(String companyName) {
 		this.companyName = companyName;
 	}
-
 	public String getCompanyLocation() {
 		return companyLocation;
 	}
-
 	public void setCompanyLocation(String companyLocation) {
 		this.companyLocation = companyLocation;
 	}
-
 	public String getCompanyNature() {
 		return companyNature;
 	}
-
 	public void setCompanyNature(String companyNature) {
 		this.companyNature = companyNature;
 	}
-
 	public String getCompanySize() {
 		return companySize;
 	}
-
 	public void setCompanySize(String companySize) {
 		this.companySize = companySize;
 	}
-
+	
+	public Company() {
+	}
 	public Company(String membership, String companyName, String companyLocation, String companyNature,
-			String companySize) {		
-		Membership = membership;
+			String companySize, Integer c_enterpriseid) {
+		super();
+		this.membership = membership;
 		this.companyName = companyName;
 		this.companyLocation = companyLocation;
 		this.companyNature = companyNature;
 		this.companySize = companySize;
 	}
-
-	public Company() {
-		
-	}
-
 	@Override
 	public String toString() {
-		return "Company [Membership=" + Membership + ", companyName=" + companyName + ", companyLocation="
+		return "Company [membership=" + membership + ", companyName=" + companyName + ", companyLocation="
 				+ companyLocation + ", companyNature=" + companyNature + ", companySize=" + companySize + "]";
 	}
-	
-	
-	
 }
