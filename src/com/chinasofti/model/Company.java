@@ -51,6 +51,9 @@ public class Company {
 	public Company() {
 	}
 	
+	public Company(String membership) {
+		this.membership = membership;
+	}
 	public Company(String membership, String companyName) {
 		this.membership = membership;
 		this.companyName = companyName;

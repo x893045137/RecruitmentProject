@@ -44,7 +44,9 @@ public class CompanyController {
 		//查询企业基本信息
 		@RequestMapping("/selectCompany.action")
 		public String SelectCompany(@ModelAttribute("company") Company company,Model model){
-			List<Company>list= companyservice.selectCompany(company);
+			List<Company>list= companyservice.selectCompany(new Company(company.getMembership()));
+			System.out.println(companyservice);
+			System.out.println(list);
 			if(list.size()>0){
 				model.addAttribute("list",list );
 				return "index-qybasic";

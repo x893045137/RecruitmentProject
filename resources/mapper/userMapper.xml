@@ -50,7 +50,7 @@
 	</insert>
 	
 	<select id="selectByEUsername" parameterType="java.lang.String"  resultMap="EUserResultMap">
-		select * from enterprise where enterprisename = #{0}
+		select * from enterprise where enterprisename = #{enterprisename}
 	</select>
 	
 	

@@ -63,8 +63,6 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public Enterprise selectByEUsername(String username) {
-		
-		
 		return userMapper.selectByEUsername(username);
 	}
 	//新增企业信息

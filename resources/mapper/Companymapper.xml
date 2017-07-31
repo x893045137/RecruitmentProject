@@ -45,7 +45,7 @@
 		resultMap="CompanyResultMap">
 		select * from company
 		<where>
-			membership="上海玺卷"
+			membership="上海企业"
 		</where>
 	</select>
 	

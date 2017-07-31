@@ -16,6 +16,7 @@ public class Enterprise {
 	
 	private String enterprisepwd; // 企业密码
 
+
 	public String getEnterpriseId() {
 		return enterpriseId;
 	}
