@@ -76,6 +76,7 @@
 		and companyLocation like  CONCAT(CONCAT('%', #{recruit.companyLocation}), '%')
 		and welfare like CONCAT(CONCAT('%', #{recruit.welfare}), '%')
 		and worktype like CONCAT(CONCAT('%', #{recruit.worktype}), '%')
+		and job like CONCAT(CONCAT('%', #{keyword}), '%')
 		) e LIMIT #{currage},#{page} 
 	</select>
 	
@@ -90,6 +91,7 @@
 		and companyLocation like  CONCAT(CONCAT('%', #{recruit.companyLocation}), '%')
 		and welfare like CONCAT(CONCAT('%', #{recruit.welfare}), '%')
 		and worktype like CONCAT(CONCAT('%', #{recruit.worktype}), '%')
+		and job like CONCAT(CONCAT('%', #{keyword}), '%')
 	</select>
 	
 	<select id="selectRecruitment"  parameterType="java.lang.String" resultMap="RecruitMap">

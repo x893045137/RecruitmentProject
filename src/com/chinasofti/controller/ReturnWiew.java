@@ -37,16 +37,17 @@ public class ReturnWiew {
 	}
 	
 	@RequestMapping("/jsp/entrance.action")
-	public ModelAndView entrance(@ModelAttribute("recruit") Recruitinfo recruit,HttpServletRequest request,HttpServletResponse response){
+	public ModelAndView entrance(HttpServletRequest request,HttpServletResponse response){
 		HttpSession session = request.getSession();		
-		session.setAttribute("salary", recruit.getSalary());
-		session.setAttribute("companyNature", recruit.getCompanyNature());
-		session.setAttribute("WorkExperience", recruit.getWorkExperience());
-		session.setAttribute("Recordschool", recruit.getRecordschool());
-		session.setAttribute("companySize", recruit.getCompanySize());
-		session.setAttribute("companyLocation", recruit.getCompanyLocation());
-		session.setAttribute("welfare", recruit.getWelfare());
-		session.setAttribute("worktype", recruit.getWorktype());
+		session.setAttribute("salary", "1");
+		session.setAttribute("companyNature", "99");
+		session.setAttribute("WorkExperience", "99");
+		session.setAttribute("Recordschool", "99");
+		session.setAttribute("companySize", "99");
+		session.setAttribute("companyLocation", "99");
+		session.setAttribute("welfare", "1");
+		session.setAttribute("worktype", "1");
+		session.setAttribute("keyword", "");
 		
 		return new ModelAndView("index");
 	}

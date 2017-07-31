@@ -134,7 +134,7 @@
             
 <p class="nlink">
     <a class="" href="index.jsp">首页</a>
-    <a class="" href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">职位搜索</a>
+    <a class="" href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">职位搜索</a>
     <a class="" href="javascript:openAreaChannelLayer();">地区频道</a>
     <a class="" href="http://www.51job.com/default_res.php">职场资讯</a>
     <a class="" href="http://xy.51job.com/default-xs.php">校园招聘</a>
@@ -173,7 +173,7 @@
                     <div class="rmsg clearfix">
                                                     <div class="rli">
                                 <img src="http://images.51job.com/im/2016/resume/man.png" alt="头像" width="85" height="104">
-                                <a class="a" track-type="trackButtonClick" event-type="1" href="description.jsp?lang=c">设置</a>
+                               
                                 <div class="rcon">
                                     <div class="h1 e2"><a href="javascript:void(0);"  onclick="edit(354961236,0,'http://i.51job.com/resume')">我的简历</a></div>                                   
                                     <c:choose>
@@ -187,7 +187,7 @@
                                                                         
                                 </div>
                                 <div class="btnbox">
-                                  <span class="p_but geige" track-type="trackButtonClick" event-type="3" onclick="edit(354961236,0,'http://i.51job.com/resume')">编辑</span>
+                                  <span class="p_but geige"  track-type="trackButtonClick" event-type="3" ><a href="goupdateUserBasic.action?username =${consumer.username }&password = ${consumer.password}">编辑</a></span>
                                 </div>
                             </div>                                              
                                                                            
@@ -201,7 +201,7 @@
                     </div>
                 </div>
                 <div class="rsee clearfix">
-                    <div class="rsl"><a track-type="trackButtonClick" event-type="4" href="http://i.51job.com/userset/resume_browsed.php?lang=c">谁看过我 <span class="c_orange">2</span></a></div>
+                    <div class="rsl"><a track-type="trackButtonClick" event-type="4" href="http://i.51job.com/userset/resume_browsed.php?lang=c">谁看过我 <span class="c_orange"></span></a></div>
                     <div class="rsl r1"><a track-type="trackButtonClick" event-type="5" href="selectApply.action?userid=${consumer.id }">我的申请 <span class="c_orange">${size }</span></a></div>
                     
                 </div>

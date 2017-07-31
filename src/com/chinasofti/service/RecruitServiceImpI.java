@@ -35,18 +35,18 @@ public class RecruitServiceImpI implements RecruitService{
 	 *分页 模糊查询
 	 */
 	@Override
-	public List<Recruitinfo> selectRecruits(Recruitinfo recruit, Integer currage, Integer page) {
+	public List<Recruitinfo> selectRecruits(Recruitinfo recruit, Integer currage, Integer page , String keyword) {
 	
-		return rm.selectRecruits(recruit, currage, page);
+		return rm.selectRecruits(recruit, currage, page,keyword);
 	}
 	
 	/**
 	 * 模糊查询所有
 	 */
 	@Override
-	public List<Recruitinfo> selectAllRecruits(Recruitinfo recruit) {
+	public List<Recruitinfo> selectAllRecruits(Recruitinfo recruit,String keyword) {
 		
-		return rm.selectAllRecruits(recruit);
+		return rm.selectAllRecruits(recruit,keyword);
 	}
 	
 	/**

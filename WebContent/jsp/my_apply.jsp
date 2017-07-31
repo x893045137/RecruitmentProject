@@ -129,7 +129,7 @@
             
 <p class="nlink">
     <a class="" href="index.jsp">首页</a>
-    <a class="" href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">职位搜索</a>
+    <a class="" href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">职位搜索</a>
     <a class="" href="javascript:openAreaChannelLayer();">地区频道</a>
     <a class="" href="http://www.51job.com/default_res.php">职场资讯</a>
     <a class="" href="http://xy.51job.com/default-xs.php">校园招聘</a>

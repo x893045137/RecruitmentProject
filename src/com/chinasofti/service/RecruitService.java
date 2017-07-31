@@ -16,10 +16,10 @@ public interface RecruitService {
 	List<Recruitinfo> selectRecruit();
 	
 	//分页模糊查询
-	List<Recruitinfo> selectRecruits(Recruitinfo recruit,Integer currage,Integer page);
+	List<Recruitinfo> selectRecruits(Recruitinfo recruit,Integer currage,Integer page,String keyword);
 	
 	//模糊查询所有
-	List<Recruitinfo> selectAllRecruits(Recruitinfo recruit);
+	List<Recruitinfo> selectAllRecruits(Recruitinfo recruit,String keyword);
 	
 	//返回进一步招聘信息
 	Recruitinfo selectRecruitment(String recruitID);

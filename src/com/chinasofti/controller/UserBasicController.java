@@ -49,6 +49,7 @@ public class UserBasicController {
 	}*/
 	@RequestMapping("/goupdateUserBasic.action")
 	public String goUserBasic(@ModelAttribute("user") User user,Model model){
+		System.out.println(user);
 		List<User> list=userbasicservice.selectUserBasic(user);
 		List<UserBasic> userbasic=null;
 		List<UserEducation> usereducation = null;

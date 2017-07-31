@@ -91,10 +91,20 @@ public class RecruitController {
 		if (rcurrage != null) {
 			currage = Integer.parseInt(rcurrage);
 		}
-		Integer num = rs.selectAllRecruits(support).size() ;// 总条数
+		
+		HttpSession session = rq.getSession();
+		String keyword = rq.getParameter("keyword");
 		
 		Integer begin =  currage*4;
-		List<Recruitinfo> selectRecruits = rs.selectRecruits(support, begin, 4);
+		
+		if(keyword != null){		
+			session.setAttribute("keyword", keyword);	
+		}else {			
+			keyword = (String) session.getAttribute("keyword");
+		}
+		
+		Integer num = rs.selectAllRecruits(support,keyword).size() ;// 总条数
+		List<Recruitinfo> selectRecruits = rs.selectRecruits(support, begin, 4 , keyword);
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("MM-dd");
 		for (Recruitinfo r : selectRecruits) {
@@ -103,7 +113,6 @@ public class RecruitController {
 		String rmessage = support.getSalary()+" "+support.getCompanyNature()+" "+	support.getWorkExperience()+" "+
 				support.getRecordschool()+" "+support.getCompanySize()+" "+support.getCompanyLocation()+" "+
 				support.getWelfare()+" "+support.getWorktype();
-		HttpSession session = rq.getSession();
 		
 		// 返回已选择哪些条件筛选
 		session.setAttribute("rmessage", rmessage);
@@ -115,6 +124,7 @@ public class RecruitController {
 		session.setAttribute("companyLocation", recruit.getCompanyLocation());
 		session.setAttribute("welfare", recruit.getWelfare());
 		session.setAttribute("worktype", recruit.getWorktype());
+		
 		
 		
 		// 总页数
@@ -131,6 +141,7 @@ public class RecruitController {
 		map.put("currage", currage);
 		map.put("recruit", selectRecruits);
 		map.put("number", number);
+		map.put("num", num);
 		mav.addAllObjects(map);
 		return  mav ;
 
@@ -165,14 +176,17 @@ public class RecruitController {
 		map.put("description", description);
 		map.put("requirement", requirement);
 		map.put("selectLikeRecruit", selectLikeRecruit);
-		
-		mav.addAllObjects(map);
-	
-		
+		mav.addAllObjects(map);		
 		return mav;
 		
 	}
 	
+	@RequestMapping("/keyword.action")
+	public ModelAndView keyword(){
+		
+		return null;
+		
+	}
 
 	
 

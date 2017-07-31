@@ -168,18 +168,18 @@
 						<div class="emsg">
                 				<div class="e qy">
 					<div class="h1">
-						<a title="上海恒信电脑软件有限公司" target="_blank" href="http://jobs.51job.com/all/co158644.html">
-						上海恒信电脑软件有限公司						</a>
-						<em>企业搜索</em>
+						<!-- <a title="上海恒信电脑软件有限公司" target="_blank" href="http://jobs.51job.com/all/co158644.html">
+												</a>
+						<em></em>
 						<label>
-							<span>2017-07-18</span>
+							<span></span>
 							&nbsp;
-							<span>13:49</span>
-						</label>
+							<span></span>
+						</label> -->
 					</div>
 					<div class="h2">
-                        <p>民营公司&nbsp;&nbsp;|&nbsp;&nbsp;少于50人&nbsp;&nbsp;|&nbsp;&nbsp;计算机软件</p>
-                        <label><span>浏览(筛选中)：</span><span>我的简历1</span></label></div>
+                       <!--  <p>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;</p>
+                        <label><span></span><span></span></label></div> -->
 				</div>
 							</div>
 			

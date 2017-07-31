@@ -246,7 +246,7 @@
 
 				<p class="nlink">
 					<a class="" href="index.jsp">首页</a> <a class="on"
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">职位搜索</a> <a class=""
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">职位搜索</a> <a class=""
 						href="javascript:openAreaChannelLayer();">地区频道</a> <a class=""
 						href="http://www.51job.com/default_res.php">职场资讯</a> <a class=""
 						href="http://xy.51job.com/default-xs.php">校园招聘</a> <a
@@ -261,31 +261,31 @@
 		
 	</script>
 	<div class="dw_wp">
-		<form name="searchForm" method="post" action="" autocomplete="off">
-			<input type="hidden" name="lang" value="c"> <input
+		<form name="searchForm" method="post" action="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}"  autocomplete="off">
+			<!-- <input type="hidden" name="lang" value="c"> <input
 				type="hidden" name="stype" value="2"> <input type="hidden"
 				name="postchannel" value="0000"> <input type="hidden"
 				name="fromType" value="1"> <input type="hidden" name="line"
 				value=""> <input id="confirmdate" type="hidden"
 				name="confirmdate" value="9"> <input type="hidden"
 				name="from" value=""> <input name="keywordtype"
-				id="keywordtype" type="hidden" value="2" />
+				id="keywordtype" type="hidden" value="2" /> -->
 			<!--搜索条件-->
 			<div class="dw_search Fm">
 				<!--关键词框 -->
 				<div class="el on" style="width: 448px">
-
 					<p class="ipt">
-						<em class="search_but dicon Dm"></em><input type="text"
+						<em class="search_but dicon Dm"></em>
+						<input type="text"
 							maxlength="200" id="kwdselectid" placeholder="请输入关键字"
-							autocomplete="off" vindex="-1" name="keyword" value=""
+							autocomplete="off" vindex="-1" name="keyword" value="${keyword }"
 							class="mytxt" preval="" />
 					</p>
 					<p class="addbut" id="work_position_click">
-						<input id="work_position_input" type="button" value="搜索"
+						<input id="work_position_input" type="submit" value="搜索"
 							class="at">
 					</p>
-					<input name="jobarea" id="jobarea" type="hidden" value="020000" />
+					
 					<!--搜索结果 -->
 					<div class="ul" id="KwdSearchResult" style="display: none;">
 					</div>
@@ -310,17 +310,17 @@
 
 				<ul>
 					<li><a class="dw_c_orange"
-						href="selectRecruit.action?lang=c&salary=1&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">所有</a></li>
+						href="selectRecruit.action?lang=c&salary=1&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">所有</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=2&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">2千以下</a></li>
+						href="selectRecruit.action?lang=c&salary=2&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">2千以下</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=3&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">2-3千</a></li>
+						href="selectRecruit.action?lang=c&salary=3&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">2-3千</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=4&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">3-4.5千</a></li>
+						href="selectRecruit.action?lang=c&salary=4&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">3-4.5千</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=5&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">4.5-6千</a></li>
+						href="selectRecruit.action?lang=c&salary=5&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">4.5-6千</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=6&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">6-8千</a></li>
+						href="selectRecruit.action?lang=c&salary=6&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">6-8千</a></li>
 
 				</ul>
 				<div class="clear"></div>
@@ -331,15 +331,15 @@
 
 				<ul>
 					<li><a class="dw_c_orange"
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=99&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">所有</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=99&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">所有</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=98&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">外资</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=98&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">外资</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=97&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">合资</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=97&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">合资</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=96&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">国企</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=96&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">国企</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=95&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">民营公司</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=95&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">民营公司</a></li>
 				</ul>
 				<div class="clear"></div>
 			</div>
@@ -349,13 +349,13 @@
 
 				<ul>
 					<li><a class="dw_c_orange"
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=99&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">所有</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=99&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">所有</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=98&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">无经验</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=98&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">无经验</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=97&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">1-3年</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=97&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">1-3年</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=96&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">3年以上</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=96&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">3年以上</a></li>
 				</ul>
 				<div class="clear"></div>
 			</div>
@@ -365,15 +365,15 @@
 
 				<ul>
 					<li><a class="dw_c_orange"
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=99&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">所有</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=99&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">所有</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=98&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">初中</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=98&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">初中</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=97&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">高中</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=97&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">高中</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=96&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">大专</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=96&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">大专</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=95&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">本科</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=95&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">本科</a></li>
 				</ul>
 				<div class="clear"></div>
 			</div>
@@ -383,13 +383,13 @@
 
 				<ul>
 					<li><a class="dw_c_orange"
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=99&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">所有</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=99&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">所有</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=98&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">少于100人</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=98&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">少于100人</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=97&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">100-500人</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=97&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">100-500人</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=96&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}">500-1000人</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=96&companyLocation=${companyLocation }&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">500-1000人</a></li>
 
 				</ul>
 				<div class="clear"></div>
@@ -399,13 +399,13 @@
 
 				<ul>
 					<li><a class="dw_c_orange"
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=99&welfare=${welfare }&worktype=${worktype}">所有</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=99&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">所有</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=98&welfare=${welfare }&worktype=${worktype}">北京</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=98&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">北京</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=97&welfare=${welfare }&worktype=${worktype}">上海</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=97&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">上海</a></li>
 					<li><a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=96&welfare=${welfare }&worktype=${worktype}">江苏</a></li>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=96&welfare=${welfare }&worktype=${worktype}&keyword =${keyword}">江苏</a></li>
 
 				</ul>
 				<div class="clear"></div>
@@ -443,14 +443,14 @@
 
 
 					<a class="dw_c_orange"
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=1">所有</a>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=1&keyword =${keyword}">所有</a>
 					<a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=2">全职</a>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=2&keyword =${keyword}">全职</a>
 
 					<a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=3">兼职</a>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=3&keyword =${keyword}">兼职</a>
 					<a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=4">实习全职</a>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=${welfare }&worktype=4&keyword =${keyword}">实习全职</a>
 					<a class="" href="search_result.jsp">实习兼职</a>
 
 				</p>
@@ -459,19 +459,19 @@
 
 
 					<a class="dw_c_orange"
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=1&worktype=${worktype}">所有</a>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=1&worktype=${worktype}&keyword =${keyword}">所有</a>
 					<a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=2&worktype=${worktype}">周末双休</a>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=2&worktype=${worktype}&keyword =${keyword}">周末双休</a>
 
 
 					<a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=3&worktype=${worktype}">五险一金</a>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=3&worktype=${worktype}&keyword =${keyword}">五险一金</a>
 					<a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=4&worktype=${worktype}">绩效奖金</a>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=4&worktype=${worktype}&keyword =${keyword}">绩效奖金</a>
 					<a class="" href="#">住房补贴</a> <a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=5&worktype=${worktype}">餐饮补贴</a>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=5&worktype=${worktype}&keyword =${keyword}">餐饮补贴</a>
 					<a class=""
-						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=6&worktype=${worktype}">员工旅游</a>
+						href="selectRecruit.action?lang=c&salary=${salary }&companyNature=${companyNature }&WorkExperience=${WorkExperience }&Recordschool=${Recordschool }&companySize=${companySize }&companyLocation=${companyLocation }&welfare=6&worktype=${worktype}&keyword =${keyword}">员工旅游</a>
 
 				</p>
 
@@ -530,7 +530,7 @@
 						</c:otherwise>
 					</c:choose>
 				</div> --%>
-				<div class="rt">共${number }条职位</div>
+				<div class="rt">共${num}条职位</div>
 
 				<div class="rt">
 					<c:choose>

@@ -1,5 +1,6 @@
 package com.chinasofti.model;
 
+
 public class Recruit {
 	
 	private Company company;

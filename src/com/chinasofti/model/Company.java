@@ -1,5 +1,10 @@
 package com.chinasofti.model;
 
+/**
+ * 企业信息
+ * @author mxl
+ *
+ */
 public class Company {
 	//公司简称
 	private String membership;

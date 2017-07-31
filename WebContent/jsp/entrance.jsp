@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="entrance.action?salary=1&companyNature=99&workExperience=99&Recordschool=99&companySize=99&companyLocation=99&welfare=1&worktype=1">最强招聘进入官网！</a>
+	<a href="entrance.action">最强招聘进入官网！</a>
 </body>
 </html>
