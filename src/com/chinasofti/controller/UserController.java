@@ -132,6 +132,7 @@ public class UserController {
 		// ModelAndView mav = new ModelAndView();
 
 		CompanyController companycontroller = new CompanyController();
+		companycontroller.SelectCompany(new Company(enter.getMembership()),model);
 		String message = null;
 
 		if (enter != null) {
@@ -141,7 +142,7 @@ public class UserController {
 				 * session.setAttribute("enterprise", enter);
 				 * mav.setViewName("index-qybasic");
 				 */
-				return companycontroller.SelectCompany(new Company(enter.getMembership()),model);
+				return null;
 			} else {
 				message = "账户或密码错误！";
 				// mav.addObject("eemessage", message);

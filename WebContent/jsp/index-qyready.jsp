@@ -18,6 +18,11 @@
 		<!-- Bootstrap.js -->
 		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 		<title>企业</title>
+		<style type="text/css">
+			table{width:100%;font-size: 14px;color:#666;border:1px solid #d4d4d4;}
+			table th{font-weight: bold;}
+			table th,td{height:50px;line-height: 50px;text-align: center;border-bottom:1px dashed #d4d4d4;}
+		</style>
 	</head>
 <body>
 		<div id="head">
