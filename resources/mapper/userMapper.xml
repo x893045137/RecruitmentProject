@@ -8,6 +8,13 @@
 		<result column="username" property="username" />
 		<result column="password" property="password" />
 	</resultMap>
+	
+	<resultMap id="EUserResultMap" type="Enterprise">
+		<id column="enterpriseId" property="enterpriseId" />
+		<result column="Membership" property="membership" />
+		<result column="enterprisename" property="enterprisename" />
+		<result column="enterprisepwd" property="enterprisepwd"/>
+	</resultMap>
 
 	<select id="login" resultMap="UserResultMap">
 		select username ,password from user
@@ -21,8 +28,33 @@
 
 	<insert id="insertRegister" parameterType="com.chinasofti.model.User">
 		insert into user
-		(username,password )
+		(id,username,password )
 		values
-		( #{username,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR})
+		( #{id},#{username,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR})
 	</insert>
+	
+	<select id="selectByenterprisename" parameterType="java.lang.String" resultType="java.lang.String">
+		select enterpriseId from enterprise where enterprisename = #{0}
+	</select>
+	
+	<select id="selectBymembership" parameterType="java.lang.String" resultType="java.lang.String">
+		select enterpriseId from enterprise where Membership = #{0}
+	</select>
+	
+	<insert id="insertenterprise" parameterType="com.chinasofti.model.Enterprise">
+		insert into enterprise values(#{enterpriseId},#{membership},#{enterprisename},#{enterprisepwd})
+	</insert>
+	
+	<insert id="insertcompany" parameterType="java.lang.String">
+		insert into company(Membership,companyName,companyLocation) values(#{0},#{1},#{2})
+	</insert>
+	
+	<select id="selectByEUsername" parameterType="java.lang.String"  resultMap="EUserResultMap">
+		select * from enterprise where enterprisename = #{0}
+	</select>
+	
+	
+	
+	
+	
 </mapper>

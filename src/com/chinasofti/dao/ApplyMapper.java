@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import com.chinasofti.model.UserBasic;
+
 
 
 @Component
@@ -19,6 +21,10 @@ public interface ApplyMapper {
 	 * @return
 	 */
 	List<String> selectRecruitID(String userId);
+	
+	UserBasic selectUserBasic(String userId);
+	
+	
 	
 	
 }

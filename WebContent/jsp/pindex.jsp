@@ -57,10 +57,10 @@
                 			<span class="l">|</span>
                 <ul>               	
                     <li class="tle"><span><a href="Myjob.action?userid=${consumer.id }">我的51Job</a><em class="icon_arrow"></em></span></li>
-                    <li class="e1 e_icon"><a href="description.jsp?lang=c">简历中心</a></li>
+                    <!-- <li class="e1 e_icon"><a href="description.jsp?lang=c">简历中心</a></li> -->
                     <li class="e2 e_icon"><a href="resume_browsed.jsp?lang=c">谁看过我</a></li>
                     <li class="e4 e_icon "><a href="selectApply.action?userid=${consumer.id }">我的申请</a></li>
-                    <li class="e6 e_icon last"><a href="#">退出帐号</a></li>
+                    <li class="e6 e_icon last"><a href="cancel.action">退出帐号</a></li>
                                     </ul>
            		 </div>             		
                 		
@@ -148,7 +148,7 @@
 
 		<div class="exlt">
     <a track-type="trackIndexClick" event-type="28" href="Myjob.action?userid=${consumer.id }" class="on"><span>我的51Job</span></a>
-    <a track-type="trackIndexClick" event-type="29" href="description.jsp" class=""><span>简历中心</span></a>
+    <!-- <a track-type="trackIndexClick" event-type="29" href="description.jsp" class=""><span>简历中心</span></a> -->
     <a track-type="trackIndexClick" event-type="30" href="resume_browsed.jsp?lang=c" class=""><span>谁看过我</span></a>
     <a track-type="trackIndexClick" event-type="32" href="selectApply.action?userid=${consumer.id }" class=""><span>我的申请<em class="new"></em></span></a>    
 </div>
@@ -175,9 +175,15 @@
                                 <img src="http://images.51job.com/im/2016/resume/man.png" alt="头像" width="85" height="104">
                                 <a class="a" track-type="trackButtonClick" event-type="1" href="description.jsp?lang=c">设置</a>
                                 <div class="rcon">
-                                    <div class="h1 e2"><a href="javascript:void(0);" title="我的简历1" onclick="edit(354961236,0,'http://i.51job.com/resume')">我的简历1</a></div>
-                                    
-                                    <div class="r1"><span title="">缪晓磊&nbsp;&nbsp;|&nbsp;&nbsp;男&nbsp;&nbsp;|&nbsp;&nbsp;23岁&nbsp;&nbsp;|&nbsp;&nbsp;暂无经验&nbsp;&nbsp;|&nbsp;&nbsp;现居住上海</span></div>
+                                    <div class="h1 e2"><a href="javascript:void(0);"  onclick="edit(354961236,0,'http://i.51job.com/resume')">我的简历</a></div>                                   
+                                    <c:choose>
+                                    	<c:when test="${ ! empty UserBasic }">
+                                    	        <div class="r1"><span title="">${UserBasic.ub_username }&nbsp;&nbsp;|&nbsp;&nbsp;${UserBasic.sex }&nbsp;&nbsp;|&nbsp;&nbsp;${UserBasic.age }岁&nbsp;&nbsp;|&nbsp;&nbsp;现居住${UserBasic.ub_address }</span></div>                             		
+                                    	</c:when>
+                                    	<c:otherwise>
+                                    		<div class="r1"><span>暂无简历信息，快去建立简历吧！</span></div>
+                                    	</c:otherwise>
+                                    </c:choose>
                                                                         
                                 </div>
                                 <div class="btnbox">

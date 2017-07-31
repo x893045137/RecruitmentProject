@@ -72,7 +72,7 @@ public class User {
 	}
 
 	public User(Integer id) {
-		super();
+
 		this.id = id;
 	}
 

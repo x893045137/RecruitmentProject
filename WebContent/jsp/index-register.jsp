@@ -82,6 +82,7 @@
 						<div class="c-lrtop"></div>
 						<div class="c-lrlogin">
 							<div class="c-lrtopt">
+							  <span style ="font-size: 30px">${umessage }</span><br/><br/>
 								用户注册 <span style="float: right; font-size: 14px;margin-top: 8px;"><a id="enter-register" href="#">企业注册</a></span>
 							</div>
 							<form id="userregisterform" action="register.action" method="post">
@@ -112,6 +113,7 @@
 						<div class="c-lrtop"></div>
 						<div class="c-lrlogin">
 							<div class="c-lrtopt">
+							 <span style ="font-size: 30px">${emessage }</span><br/><br/>
 								企业注册 <span style="float: right; font-size: 14px;margin-top: 8px;"><a id="user-register" href="#">用户注册</a></span>
 							</div>
 							<form id="cop-registerform" action="enterprise.action" method="post">

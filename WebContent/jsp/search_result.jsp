@@ -161,10 +161,10 @@
 							<ul>
 								<li class="tle"><span><a href="Myjob.action?userid=${consumer.id }">我的51Job</a><em
 										class="icon_arrow"></em></span></li>
-								<li class="e1 e_icon"><a href="description.jsp?lang=c">简历中心</a></li>
+							<!-- 	<li class="e1 e_icon"><a href="description.jsp?lang=c">简历中心</a></li> -->
 								<li class="e2 e_icon"><a href="resume_browsed.jsp?lang=c">谁看过我</a></li>								
 								<li class="e4 e_icon "><a href="selectApply.action?userid=${consumer.id }">我的申请</a></li>
-								<li class="e6 e_icon last"><a href="#">退出帐号</a></li>
+								<li class="e6 e_icon last"><a href="cancel.action">退出帐号</a></li>
 							</ul>
 						</div>
 					</c:when>

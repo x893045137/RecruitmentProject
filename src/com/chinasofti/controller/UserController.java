@@ -1,7 +1,9 @@
 package com.chinasofti.controller;
 
 import java.util.List;
+import java.util.Random;
 import java.util.UUID;
+
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -56,25 +58,115 @@ public class UserController {
 	// 登录功能完善
 	@RequestMapping("/register.action")
 	public ModelAndView register(User user) {
-		int i = userService.insert(user);	
-		System.out.println(i);
-		ModelAndView mav = new ModelAndView("index-login");
+		
+		User ruser = userService.selectByUsername(user.getUsername());
+		
+		String umessage = null;
+		
+		if(ruser != null){
+			umessage   = "该账号已被注册！";
+		}else{
+			
+			
+			Random random = new Random();
+			
+			int nextInt = random.nextInt(1000000000);		
+			user.setId(nextInt);
+			userService.insert(user);	
+			umessage = "用户注册成功！快去登陆吧！";
+		}
+		
+		ModelAndView mav = new ModelAndView("index-register");
 		mav.addObject("user", user);
+		mav.addObject("umessage",umessage);
 		return mav;
 	}
 	
+	/**
+	 * 企业注册
+	 * @param enterprise
+	 * @param rq
+	 * @return
+	 */
 	 @RequestMapping("/enterprise.action")
 	 public ModelAndView enterprise(@ModelAttribute("enterprise") Enterprise enterprise,HttpServletRequest rq){
 		 
 		 String companyLocation = rq.getParameter("companyLocation");
 		 String companyname = rq.getParameter("companyname");
 		 
+		 enterprise.setEnterpriseId(getUUID());
 		 
+		 String selectByenterprisename = userService.selectByenterprisename(enterprise.getEnterprisename());
 		 
+		 String selectBymembership = userService.selectBymembership(enterprise.getMembership());
+		 ModelAndView mav = new ModelAndView("index-register");
+		 
+		 String message = null;
+		 
+		 if(selectBymembership != null){
+			 message = "该会员号已被注册！";
+		 } else if(selectByenterprisename != null){
+			 message = "该用户名已被注册 ！";
+		 }else {
+			 userService.insertenterprise(enterprise);
+			 userService.insertcompany(enterprise.getMembership(),companyname,companyLocation);
+			 message = "恭喜你，注册成功！";
+			 
+		 }
+		 
+		 mav.addObject("emessage",message);	 
+		
+		 
+		 return mav;
+		 
+	 }
+	 
+	 /**
+	  * 企业登录
+	  */
+	 @RequestMapping("/qiyelogin.action")
+	 public ModelAndView qiyelogin(@ModelAttribute("enterprise" ) Enterprise enterprise,HttpServletRequest rq){
 		 
 		 enterprise.setEnterpriseId(getUUID());
 		 
-		return null;
+		 Enterprise enter = userService.selectByEUsername(enterprise.getEnterprisename());
+		 
+		 ModelAndView mav = new ModelAndView();
+		 
+		 String message = null;
+		 
+		 if(enter != null){
+			 if(enter.getEnterprisepwd().equals(enterprise.getEnterprisepwd())){
+				 HttpSession session = rq.getSession();			 
+				 session.setAttribute("enterprise", enter);
+				 mav.setViewName("index-qybasic");
+			 }else{
+				 message = "密码错误！";
+				 mav.addObject("eemessage", message);
+			 }
+		 }else {
+			 message = "该账号不存在！";
+			 mav.addObject("eemessage", message);
+		 }
+		 
+		
+		return mav;
+		 
+	 }
+	 
+	 
+	 
+	 
+	 /**
+	  * 退出登录
+	  * @return
+	  */
+	 @RequestMapping("/cancel.action")
+	 public ModelAndView cancel(HttpServletRequest rq){
+		 HttpSession session = rq.getSession();
+		 session.removeAttribute("consumer");  //注销session中的username对象
+		 ModelAndView mav = new ModelAndView("index");
+		 return mav ;
 		 
 	 }
 	 

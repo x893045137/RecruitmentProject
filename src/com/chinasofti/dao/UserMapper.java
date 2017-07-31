@@ -34,5 +34,7 @@ public interface UserMapper {
 	//新增企业信息
 	
 	int insertcompany(String... strings);
+	
+	Enterprise selectByEUsername(String username);
 
 }

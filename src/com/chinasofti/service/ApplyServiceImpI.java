@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.chinasofti.dao.ApplyMapper;
+import com.chinasofti.model.UserBasic;
 
 @Service
 public class ApplyServiceImpI  implements ApplyService{
@@ -38,6 +39,11 @@ public class ApplyServiceImpI  implements ApplyService{
 	public List<String> selectRecruitID(String userId) {
 		
 		return am.selectRecruitID(userId);
+	}
+	@Override
+	public UserBasic selectUserBasic(String userId) {
+		
+		return am.selectUserBasic(userId);
 	}
 
 

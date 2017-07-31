@@ -126,16 +126,12 @@
 							<form id="qiyeloginform" action="qiyelogin.action" method="post">
 								<div class="c-lrform">
 									<div class="c-lrinline">
-										<label class="c-lrlabel">会员名：<span></span></label>
-										<input class="c-lrinputpsd" id="qiyeloginId" type="text" name="name" placeholder="请输入会员名" />
-									</div>
-									<div class="c-lrinline">
 										<label class="c-lrlabel">用户名：<span></span></label>
-										<input class="c-lrinputpsd" id="qiyeloginname" type="text" name="username" placeholder="请输入用户名" />
+										<input class="c-lrinputpsd" id="qiyeloginname" type="text" name="enterprisename" placeholder="请输入用户名" />
 									</div>
 									<div class="c-lrinline">
 										<label class="c-lrlabel">密码：<span></span></label>
-										<input class="c-lrinputpsd" id="qiyeloginpsd" type="password" name="password" placeholder="请输入密码" />
+										<input class="c-lrinputpsd" id="qiyeloginpsd" type="password" name="enterprisepwd" placeholder="请输入密码" />
 									</div>
 									<!--<div class="c-lrinline">
 										<span style="line-height: 20px;"><input type="checkbox" style="vertical-align:middle; margin-top:-1px; margin-bottom:1px;"/> 自动登录</span>
@@ -170,7 +166,7 @@
 		});
 		//企业用户登录
 		$("#qiyelogin-sub").click(function() {
-			if($("#qiyeloginId").val().length == 0 || $("#qiyeloginname").val().length == 0 || $("#qiyeloginpsd").val().length ==0){
+			if($("#qiyeloginname").val().length == 0 || $("#qiyeloginpsd").val().length ==0){
 				alert("用户名或密码不能为空");
 			} else {
 				$("#qiyeloginform").submit();

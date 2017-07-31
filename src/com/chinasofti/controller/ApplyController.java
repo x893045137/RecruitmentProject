@@ -18,6 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.chinasofti.model.Recruitinfo;
+import com.chinasofti.model.UserBasic;
 import com.chinasofti.service.ApplyService;
 import com.chinasofti.service.RecruitService;
 
@@ -134,10 +135,13 @@ public class ApplyController {
 		
 		List<String> recruitID = as.selectRecruitID(userid);
 		
+		UserBasic UserBasic = as.selectUserBasic(userid);
+		
 		int size = recruitID.size(); // 申请个数
 		
-		ModelAndView mav = new ModelAndView("my_apply");
+		ModelAndView mav = new ModelAndView("pindex");
 		mav.addObject("size",size);
+		mav.addObject("UserBasic", UserBasic);
 		
 		return mav;
 		
