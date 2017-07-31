@@ -94,6 +94,8 @@ public class UserController {
 		 String companyLocation = rq.getParameter("companyLocation");
 		 String companyname = rq.getParameter("companyname");
 		 
+		 System.out.println(enterprise);
+		 
 		 enterprise.setEnterpriseId(getUUID());
 		 
 		 String selectByenterprisename = userService.selectByenterprisename(enterprise.getEnterprisename());

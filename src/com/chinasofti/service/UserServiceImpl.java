@@ -58,16 +58,19 @@ public class UserServiceImpl implements UserService {
 		
 		return userMapper.insertenterprise(enterprise);
 	}
-	//新增企业信息
-	@Override
-	public int insertcompany(String... strings) {		
-		return userMapper.insertcompany(strings);
-	}
+
+
 
 	@Override
 	public Enterprise selectByEUsername(String username) {
 		
 		
 		return userMapper.selectByEUsername(username);
+	}
+	//新增企业信息
+	@Override
+	public int insertcompany(String membership, String companyName, String companyLocation) {
+		
+		return userMapper.insertcompany(membership, companyName, companyLocation);
 	}
 }

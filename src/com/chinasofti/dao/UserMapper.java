@@ -33,7 +33,7 @@ public interface UserMapper {
 	
 	//新增企业信息
 	
-	int insertcompany(String... strings);
+	int insertcompany(String membership,String companyName,String companyLocation);
 	
 	Enterprise selectByEUsername(String username);
 
