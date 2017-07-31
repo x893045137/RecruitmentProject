@@ -199,7 +199,7 @@ public class Recruitinfo {
 	public void setDate(String date) {
 		this.date = date;
 	}
-
+	
 	public Recruitinfo(String recruitinfoID, String recruitID, String job, String workExperience, String salary,
 			String welfare, String hiring, String recordschool, String membership, Date releaseTime, String companyName,
 			String companyLocation, String companyNature, String companySize, String worktype, String descriptions,
@@ -227,7 +227,6 @@ public class Recruitinfo {
 	}
 
 	public Recruitinfo(String recruitID) {
-		super();
 		this.recruitID = recruitID;
 	}
 

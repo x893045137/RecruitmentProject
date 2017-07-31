@@ -55,6 +55,7 @@
 					</div>
 				</div>
 				<div class="c-resumeright">
+				<span style="width:100%;height:24px;line-height: 24px;float:left;color:red;font-size:14px;">${message}</span>
 					<div class="c-qybasic" id="c-qybasic1">
 						<div class="c-qytext1">
 							<label class="c-qylabel1">公司名称：</label>
@@ -105,13 +106,13 @@
 								<input class="c-qyinput2" type="button" onclick="cqypsub('${list[0].companyName}','${list[0].membership}')" value="发布招聘" />
 							</label>
 							<label class="c-qylabel1" style="width:50%;text-align: center;">
-								<input class="c-qyinput2" type="button" id="c-qypclose" value="修改信息"/>
+								<input class="c-qyinput2" type="button" onclick="cqypclose('${list[0].companyName}','${list[0].membership}' ,'${list[0].recruitID}')" value="修改信息"/>
 							</label>
 						</div>
 					</div>
 					
 						<div class="c-qybasic" id="c-qypost2" style="display: none;">
-						<form id="qyzbform" action="insertRecruitinfo.action" method="post">
+						<form id="qyzbform" action="" method="post">
 							<div class="c-qytext1">
 								<label class="c-qylabel1">公司名称：</label>
 								<input class="c-qyinput1" type="text" name="companyName" id="cp-companyName"  readonly="readonly"/>
@@ -156,11 +157,11 @@
 							</div>
 							<div class="c-qytext1 c-qytext2 ">
 								<label class="c-qylabel1 " style="width:38%; ">薪资：</label>
-								<input class="c-qyinput1 c-qyinput3 " type="text"  name="salary"/>
+								<input class="c-qyinput1 c-qyinput3 " type="number"  name="salary"/>
 							</div>
 							<div class="c-qytext1 c-qytext2 ">
 								<label class="c-qylabel1 " style="width:38%; ">人数：</label>
-								<input class="c-qyinput1 c-qyinput3 " type="text" name="hiring" />
+								<input class="c-qyinput1 c-qyinput3 " type="number" name="hiring" />
 							</div>
 							<div class="c-qytext1 c-qytext2 ">
 							</div>
@@ -201,70 +202,70 @@
 					</div>
 
 					<div class="c-qybasic " id="c-qypost3" style="display: none; ">
-						<form id="qygbform" action=" " method="post ">
+						<form id="qygbform" action="updateRecruitinfo.action" method="post">
+							<input type="hidden" id="cg-recruitID" name="recruitID"/>
 							<div class="c-qytext1 ">
 								<label class="c-qylabel1 ">公司名称：</label>
-								<input class="c-qyinput1 " type="text " name=" " />
+								<input class="c-qyinput1 " type="text" id="cg-companyName" name="companyName" readonly="readonly"/>
 							</div>
 							<div class="c-qytext1 ">
 								<label class="c-qylabel1 ">公司简称：</label>
-								<input class="c-qyinput1 " type="text " name=" " />
+								<input class="c-qyinput1 " type="text" id="cg-membership" name="membership" readonly="readonly"/>
 							</div>
 							<div class="c-qytext1 ">
 								<label class="c-qylabel1 ">地 &nbsp;&nbsp;&nbsp;&nbsp; 址：</label>
-								<input class="c-qyinput1 " type="text " name=" " />
+								<input class="c-qyinput1 " type="text" name="companyLocation" />
 							</div>
 							<div class="c-qytext1 c-qytext2 ">
 								<label class="c-qylabel1 " style="width:38%; ">公司性质：</label>
-								<select class="c-qyinput1 c-qyinput3" name=" ">
-									<option value="民企 ">民企</option>
-									<option value="国企 ">国企</option>
-									<option value="外资 ">外资</option>
+								<select class="c-qyinput1 c-qyinput3" name="companyNature">
+									<option value="民企">民企</option>
+									<option value="国企">国企</option>
+									<option value="外资">外资</option>
 								</select>
 							</div>
 							<div class="c-qytext1 c-qytext2 ">
-
 							</div>
 							<div class="c-qytext1 c-qytext2 ">
 								<label class="c-qylabel1 " style="width:38%; ">职位：</label>
-								<select class="c-qyinput1 c-qyinput3 " name=" ">
-									<option value="技术 ">技术</option>
-									<option value="销售 ">销售</option>
+								<select class="c-qyinput1 c-qyinput3 " name="job">
+									<option value="技术">技术</option>
+									<option value="销售">销售</option>
 								</select>
 							</div>
 							<div class="c-qytext1 c-qytext2 ">
 								<label class="c-qylabel1 " style="width:38%; ">岗位：</label>
-								<input class="c-qyinput1 c-qyinput3 " type="text " />
+								<input class="c-qyinput1 c-qyinput3 " type="text " name="jobtype"/>
 							</div>
 							<div class="c-qytext1 c-qytext2 ">
 								<label class="c-qylabel1 " style="width:38%; ">工资性质：</label>
-								<select class="c-qyinput1 c-qyinput3 " name=" ">
-									<option value="全职 ">全职</option>
-									<option value="兼职 ">兼职</option>
-									<option value="实习 ">实习</option>
+								<select class="c-qyinput1 c-qyinput3 " name="worktype">
+									<option value="全职">全职</option>
+									<option value="兼职">兼职</option>
+									<option value="实习">实习</option>
 								</select>
 							</div>
 							<div class="c-qytext1 c-qytext2 ">
 								<label class="c-qylabel1 " style="width:38%; ">薪资：</label>
-								<input class="c-qyinput1 c-qyinput3 " type="text " />
+								<input class="c-qyinput1 c-qyinput3 " type="number" name="salary"/>
 							</div>
 							<div class="c-qytext1 c-qytext2 ">
 								<label class="c-qylabel1 " style="width:38%; ">人数：</label>
-								<input class="c-qyinput1 c-qyinput3 " type="text " />
+								<input class="c-qyinput1 c-qyinput3 " type="number" name="hiring"/>
 							</div>
 							<div class="c-qytext1 c-qytext2 ">
 							</div>
 							<div class="c-qytext1 " style="height:150px; ">
 								<label class="c-qylabel1 ">岗位描述：</label>
-								<textarea class="c-qyinput1 " style="width:70%;height:120px;min-height: 120px;min-width: 70%;margin-left: -10px; " placeholder="请输入岗位描述 "></textarea>
+								<textarea class="c-qyinput1 " style="width:70%;height:120px;min-height: 120px;min-width: 70%;margin-left: -10px; " placeholder="请输入岗位描述 " name="descriptions"></textarea>
 							</div>
 							<div class="c-qytext1 c-qytext2 ">
 								<label class="c-qylabel1 " style="width:38%; ">学历：</label>
-								<input class="c-qyinput1 c-qyinput3 " type="text " />
+								<input class="c-qyinput1 c-qyinput3 " type="text" name="recordschool"/>
 							</div>
 							<div class="c-qytext1 c-qytext2 ">
 								<label class="c-qylabel1 " style="width:38%; ">工作时间：</label>
-								<select class="c-qyinput1 c-qyinput3 " name=" ">
+								<select class="c-qyinput1 c-qyinput3 " name="workExperience">
 									<option value="1-3年 ">1-3年</option>
 									<option value="3-5年 ">3-5年</option>
 									<option value="5-10年 ">5-10年</option>
@@ -273,11 +274,11 @@
 							</div>
 							<div class="c-qytext1" style="height:150px; ">
 								<label class="c-qylabel1 ">职位需求：</label>
-								<textarea class="c-qyinput1 " style="width:70%;height:120px;min-height: 120px;min-width: 70%;margin-left: -10px; " placeholder="请输入职位需求 "></textarea>
+								<textarea class="c-qyinput1 " style="width:70%;height:120px;min-height: 120px;min-width: 70%;margin-left: -10px; " placeholder="请输入职位需求" name="requirement"></textarea>
 							</div>
 							<div class="c-qytext1" style="height:150px; ">
 								<label class="c-qylabel1 ">公司福利：</label>
-								<textarea class="c-qyinput1 " style="width:70%;height:120px;min-height: 120px;min-width: 70%;margin-left: -10px; " placeholder="请输入公司福利 "></textarea>
+								<textarea class="c-qyinput1 " style="width:70%;height:120px;min-height: 120px;min-width: 70%;margin-left: -10px; " placeholder="请输入公司福利 " name="welfare"></textarea>
 							</div>
 							<div class="c-qytext1 " style="border:none ">
 								<label class="c-qylabel1" style="width:50%;text-align: center;">
@@ -294,16 +295,19 @@
 		</div>
 	</body>
 	<script type="text/javascript">
-			function cqypsub(name,id){
+		function cqypsub(name,id){
 			$("#cp-companyName").val(name);
 			$("#cp-membership").val(id);
 			$("#c-qypost2").css("display", "block");
 			$("#c-qybasic1").css("display", "none");
 		}
-		$("#c-qypclose").click(function() {
+		function cqypclose(name,ip,id){
+			$("#cg-companyName").val(name);
+			$("#cg-membership").val(ip);
+			$("#cg-recruitID").val(id);
 			$("#c-qypost3").css("display", "block");
 			$("#c-qybasic1").css("display", "none");
-		});
+		}
 		$("#c-qygpclose").click(function(){
 			$(':input','#qygbform').not(':button,:submit, :reset, :hidden').val('');
 			$("#c-qybasic1").css("display", "block");

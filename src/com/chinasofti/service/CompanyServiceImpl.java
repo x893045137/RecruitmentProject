@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.chinasofti.dao.CompanyMapper;
 import com.chinasofti.model.Company;
+import com.chinasofti.model.CompanyDelivery;
 import com.chinasofti.model.Recruitinfo;
 
 @Service
@@ -42,7 +43,21 @@ public class CompanyServiceImpl implements CompanyService{
 	public int updateRecruitinfo(Recruitinfo recruitinfo) {
 		return companymapper.updateRecruitinfo(recruitinfo);
 	}
-	
 
-	
+	@Override
+	public int insertCompany(Company company) {
+		return companymapper.insertCompany(company);
+	}
+
+	@Override
+	public int updateCompany(Company company) {
+		return companymapper.updateCompany(company);
+	}
+
+	@Override
+	public List<CompanyDelivery> selectCompanyDelivery() {
+		return companymapper.selectCompanyDelivery();
+	}
+
+
 }

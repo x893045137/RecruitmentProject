@@ -1,5 +1,6 @@
 package com.chinasofti.controller;
 
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.chinasofti.model.Company;
+import com.chinasofti.model.CompanyDelivery;
 import com.chinasofti.model.Recruitinfo;
 import com.chinasofti.service.CompanyService;
 
@@ -51,6 +53,29 @@ public class CompanyController {
 				return "index-qybasic";
 			}
 		}
+		//新增企业基本信息
+		@RequestMapping("/insertCompany.action")
+		public String InsertCompany(@ModelAttribute("company") Company company,Model model){
+			int i=companyservice.insertCompany(company);
+			if(i>0){
+				return SelectCompany(new Company(company.getMembership(),company.getCompanyName()) , model);
+			}else{
+				return SelectCompany(new Company(company.getMembership(),company.getCompanyName()) , model);
+			}
+		}
+		
+		//修改企业基本信息
+		@RequestMapping("/updateCompany.action")
+		public String UpdateCompany(@ModelAttribute("company") Company company,Model model){
+			int i = companyservice.updateCompany(company);
+			if(i>0){
+				model.addAttribute("message", "修改成功");
+				return SelectCompany(new Company(company.getMembership(),company.getCompanyName()) , model);
+			}else{
+				model.addAttribute("message", "修改成功");
+				return SelectCompany(new Company(company.getMembership(),company.getCompanyName()) , model);
+			}
+		}
 		
 		//查询用户招聘信息
 		@RequestMapping("/slectRecruitinfo.action")
@@ -65,18 +90,43 @@ public class CompanyController {
 			}
 		}
 		
+		//新增企业招聘信息
 		@RequestMapping("/insertRecruitinfo.action")
 		public String InsertRecruitinfo(@ModelAttribute("recruitinfo") Recruitinfo recruitinfo,Model model){
 			recruitinfo.setRecruitID(getUUID());
-			System.out.println(recruitinfo.getRecruitID());
+			recruitinfo.setReleaseTime(new Date());
 			int i = companyservice.insertRecruitinfo(recruitinfo);
-			String message=null;
 			if(i>0){
 				model.addAttribute("message", "新增成功");
 				return SelectRecruitinfo(new Recruitinfo(recruitinfo.getRecruitID()),model);
 			}else{
 				model.addAttribute("message", "新增失败");
-				return "index-qypost";
+				return SelectRecruitinfo(new Recruitinfo(recruitinfo.getRecruitID()),model);
+			}
+		}
+		
+		//修改企业招聘信息
+		@RequestMapping("/updateRecruitinfo.action")
+		public String UpdateRecruitinfo(@ModelAttribute("recruitinfo") Recruitinfo recruitinfo,Model model){
+			int i=companyservice.updateRecruitinfo(recruitinfo);
+			System.out.println(recruitinfo.getRecruitID());
+			if(i>0){
+				model.addAttribute("message", "修改成功");
+				return SelectRecruitinfo(new Recruitinfo(recruitinfo.getRecruitID()),model);
+			}else{
+				model.addAttribute("message", "修改失败");
+				return SelectRecruitinfo(new Recruitinfo(recruitinfo.getRecruitID()),model);
+			}
+		}
+		
+		//查询投递信息
+		public String SelectCompanyDelivery(@ModelAttribute("companydelivery") CompanyDelivery companydelivery , Model model){
+			List<CompanyDelivery> list=companyservice.selectCompanyDelivery();
+			if(list.size()>0){
+				model.addAttribute("list", list);
+				return "index-qyready";
+			}else{
+				return "index-qyready";
 			}
 		}
 }

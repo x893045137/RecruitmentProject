@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.chinasofti.dao.CompanyMapper">
+	<!-- 企业基本信息 -->
 	<resultMap type="Company" id="CompanyResultMap">
 		<id column="membership" property="membership" />
 		<result column="companyName" property="companyName" />
@@ -8,7 +9,8 @@
 		<result column="companyNature" property="companyNature" />
 		<result column="companySize" property="companySize" />
 	</resultMap>
-
+	
+	<!-- 招聘信息 -->
 	<resultMap type="Recruitinfo" id="RecruitMap">
 		<id property="recruitID" column="recruitID" />
 		<result property="job" column="job" />
@@ -27,6 +29,17 @@
 		<result property="recordschool" column="Recordschool" />
 		<result property="membership" column="Membership" />
 	</resultMap>
+	
+	<!-- 投递 -->
+	<resultMap type="CompanyDelivery" id="CompanyDeliveryResultMap">
+		<id property="deliveryid" column="deliveryid"/>
+		<result property="rd_username" column="rd_username"/>
+		<result property="rd_workexe" column="rd_workexe"/>
+		<result property="rd_jobtype" column="rd_jobtype"/>
+		<result property="rd_salary" column="rd_salary"/>
+		<result property="rd_phone" column="rd_phone"/>
+		<result property="rd_email" column="rd_email"/>
+	</resultMap>
 	<!-- 查询企业基本信息 -->
 	<select id="selectCompany" parameterType="com.chinasofti.model.Company"
 		resultMap="CompanyResultMap">
@@ -35,13 +48,62 @@
 			membership="上海玺卷"
 		</where>
 	</select>
+	
+	<!-- 新增企业基本信息 -->
+	<insert id="insertCompany" parameterType="com.chinasofti.model.Company">
+		insert into company(
+			membership,
+			companyName,
+			companyLocation,
+			companyNature,
+			companySize
+		) values
+			<trim prefix="(" suffix=")" prefixOverrides=",">
+				<if test="membership !=null and '' !=membership">
+					#{membership},
+				</if>
+				<if test="null != companyName and '' !=companyName">
+					#{companyName},
+				</if>
+				<if test="null != companyLocation and '' !=companyLocation">
+					#{companyLocation},
+				</if>
+				<if test="null != companyNature and '' != companyNature">
+					#{companyNature},
+				</if>
+				<if test=" null != companySize and '' != companySize">
+					#{companySize}
+				</if>
+			</trim>
+	</insert>
+	
+	<!-- 修改企业信息 -->
+	<update id="updateCompany" parameterType="com.chinasofti.model.Company">
+		update company 
+		<set>
+			<if test="null != companyLocation and '' !=companyLocation">
+					companyLocation=#{companyLocation},
+				</if>
+				<if test="null != companyNature and '' != companyNature">
+					companyNature=#{companyNature},
+				</if>
+				<if test=" null != companySize and '' != companySize">
+					companySize=#{companySize}
+				</if>
+		</set>
+		<where>
+			membership=#{membership}
+		</where>
+	</update>
+	<!-- 查询招聘信息 -->
 	<select id="selectRecruitinfo" parameterType="com.chinasofti.model.Recruitinfo"
 		resultMap="RecruitMap">
 		select * from recruitinfo
 		<where>
-			Membership="上海玺卷"
+			recruitID=1233
 		</where>
 	</select>
+	<!-- 新增招聘信息 -->
 	<insert id="insertRecruitinfo" parameterType="com.chinasofti.model.Recruitinfo">
 		insert into recruitinfo(
 		job,
@@ -58,7 +120,8 @@
 		welfare,
 		WorkExperience,
 		Recordschool,
-		)values
+		membership
+		) values
 		<trim prefix="(" suffix=")" prefixOverrides=",">
 			<if test="null != job and '' !=job">
 				#{job},
@@ -93,7 +156,7 @@
 			<if test="null != jobtype and '' !=jobtype">
 				#{jobtype},
 			</if>
-			<if test="null != welfares and '' != welfare">
+			<if test="null != welfare and '' != welfare">
 				#{welfare],
 			</if>
 			<if test="null != workExperience and '' != workExperience">
@@ -102,6 +165,58 @@
 			<if test="null != recordschool and '' != recordschool">
 				#{recordschool},
 			</if>
+			<if test="null != membership and '' != membership">
+				#{membership}
+			</if>
 		</trim>
 	</insert>
+	<!-- 修改招聘信息 -->
+	<update id="updateRecruitinfo" parameterType="com.chinasofti.model.Recruitinfo">
+		update recruitinfo 
+		<set>
+			<if test="null != job and '' !=job">
+				job=#{job},
+			</if>
+			<if test="null != salary and '' !=salary">
+				salary=#{salary},
+			</if>
+			<if test="null != companyLocation and '' !=companyLocation">
+				companyLocation=#{companyLocation},
+			</if>
+			<if test="null != hiring and '' != hiring">
+				hiring=#{hiring},
+			</if>
+			<if test="null != companyNature and '' !=companyNature">
+				companyNature=#{companyNature},
+			</if>
+			<if test="null !=companySize and '' !=companySize">
+				companySize=#{companySize},
+			</if>
+			<if test="null != descriptions and '' !=descriptions">
+				descriptions=#{descriptions},
+			</if>
+			<if test="null != requirement and '' !=requirement">
+				requirement=#{requirement},
+			</if>
+			<if test="null != jobtype and '' !=jobtype">
+				jobtype=#{jobtype},
+			</if>
+			<if test="null != welfare and '' != welfare">
+				welfare=#{welfare},
+			</if>
+			<if test="null != workExperience and '' != workExperience">
+				workExperience=#{workExperience},
+			</if>
+			<if test="null != recordschool and '' != recordschool">
+				recordschool=#{recordschool}
+			</if>
+		</set>
+		<where>
+				recruitID=1233
+		</where>
+	</update>
+	<select id="selectCompanyDelivery" parameterType="com.chinasofti.model.CompanyDelivery"
+	resultMap="CompanyDeliveryResultMap">
+		select * from readydelivery 
+	</select>
 </mapper>

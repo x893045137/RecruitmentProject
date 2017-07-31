@@ -50,12 +50,13 @@
 								<a href="slectRecruitinfo.action">发布招聘</a>
 							</li>
 							<li>
-								<a href="javascript:void(0)">基本信息</a>
+								<a href="javascript:void(0)">查看投递</a>
 							</li>
 						</ul>
 					</div>
 				</div>
 				<div class="c-resumeright">
+				<span style="width:100%;height:24px;line-height: 24px;float:left;color:red;font-size:14px;">${message}</span>
 					<div class="c-qybasic" id="c-qybasic1">
 						<div class="c-qytext1">
 							<label class="c-qylabel1">公司名称：</label>
@@ -78,26 +79,26 @@
 							<span>${list[0].companySize}</span>
 						</div>
 						<div class="c-qytext1" style="border:none">
-							<label class="c-qylabel1" style="width:100%;text-align: right;"><a class="c-qygai" href="javascript:void(0)" onclick="cqygai()">完善信息</a></label>
+							<label class="c-qylabel1" style="width:100%;text-align: right;"><a class="c-qygai" href="javascript:void(0)" onclick="cqygai('${list[0].companyName}','${list[0].membership}')">完善信息</a></label>
 						</div>
 					</div>
 					<div class="c-qybasic" id="c-qybasic2" style="display: none;">
-						<form id="qybform" action="" method="post">
+						<form id="qybform" action="updateCompany.action" method="post">
 						<div class="c-qytext1">
 							<label class="c-qylabel1">公司名称：</label>
-							<input class="c-qyinput1" type="text" name="" />
+							<input class="c-qyinput1" id="cg-companyName" type="text" name="companyName" />
 						</div>
 						<div class="c-qytext1">
 							<label class="c-qylabel1">公司简称：</label>
-							<input class="c-qyinput1" type="text" name="" />
+							<input class="c-qyinput1" id="cg-membership" type="text" name="membership" />
 						</div>
 						<div class="c-qytext1">
 							<label class="c-qylabel1">地 &nbsp;&nbsp;&nbsp;&nbsp; 址：</label>
-							<input class="c-qyinput1" type="text" name="" />
+							<input class="c-qyinput1" type="text" name="companyLocation" />
 						</div>
 						<div class="c-qytext1">
 							<label class="c-qylabel1">公司性质：</label>
-							<select class="c-qyinput1" name="" >
+							<select class="c-qyinput1" name="companyNature" >
 								<option value="民企">民企</option>
 								<option value="国企">国企</option>
 								<option value="外资">外资</option>
@@ -105,7 +106,7 @@
 						</div>
 						<div class="c-qytext1">
 							<label class="c-qylabel1">规 &nbsp;&nbsp;&nbsp;&nbsp; 模：</label>
-							<select class="c-qyinput1" name="" >
+							<select class="c-qyinput1" name="companySize" >
 								<option value="低于100人">低于100人</option>
 								<option value="100-500人">100-500人</option>
 								<option value="500-1000人">500-1000人</option>
@@ -126,7 +127,10 @@
 		</div>
 	</body>
 	<script type="text/javascript">
-		function cqygai(){
+		function cqygai(name,ip){
+			alert(name+" "+ ip);
+			$("#cg-companyName").val(name);
+			$("#cg-membership").val(ip);
 			$("#c-qybasic1").css("display","none");
 			$("#c-qybasic2").css("display","block");
 		}

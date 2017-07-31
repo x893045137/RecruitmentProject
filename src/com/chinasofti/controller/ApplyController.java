@@ -142,7 +142,7 @@ public class ApplyController {
 		ModelAndView mav = new ModelAndView("pindex");
 		mav.addObject("size",size);
 		mav.addObject("UserBasic", UserBasic);
-		
+		mav.addObject("id", userid);
 		return mav;
 		
 	}

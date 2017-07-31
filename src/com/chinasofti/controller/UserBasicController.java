@@ -49,8 +49,8 @@ public class UserBasicController {
 	}*/
 	@RequestMapping("/goupdateUserBasic.action")
 	public String goUserBasic(@ModelAttribute("user") User user,Model model){
-		System.out.println(user);
 		List<User> list=userbasicservice.selectUserBasic(user);
+		if(list.size()>0){
 		List<UserBasic> userbasic=null;
 		List<UserEducation> usereducation = null;
 		List<UserObjective> userobjective = null;
@@ -67,7 +67,11 @@ public class UserBasicController {
 		model.addAttribute("userworkexe", userworkexe);
 		model.addAttribute("list", list);
 		return "index-resume";
+		}else{
+		return "index-resume";
+		}
 	}
+		
 	//修改用户基本信息
 	@RequestMapping("/updateUserbasic.action")
 	public String UpdateUserBasic(@ModelAttribute("userbasic") UserBasic userbasic,Model model){

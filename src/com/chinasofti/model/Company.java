@@ -50,6 +50,11 @@ public class Company {
 	
 	public Company() {
 	}
+	
+	public Company(String membership, String companyName) {
+		this.membership = membership;
+		this.companyName = companyName;
+	}
 	public Company(String membership, String companyName, String companyLocation, String companyNature,
 			String companySize, Integer c_enterpriseid) {
 		super();
