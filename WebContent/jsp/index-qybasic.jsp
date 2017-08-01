@@ -32,7 +32,7 @@
 						<img src="../img/slogen.png" alt="" />
 					</div>
 					<div class="head-right">
-						<a class="head-ss" href="./index.jsp">首页</a>
+						<a class="head-ss" href="index.jsp">首页</a>
 						<a class="head-ss" href="#">帮助中心</a>
 					</div>
 				</div>

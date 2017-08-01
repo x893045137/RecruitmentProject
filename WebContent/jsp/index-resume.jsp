@@ -65,7 +65,7 @@ textarea {
 					<span class="head-shu">|</span>
 				</div>
 				<div class="head-right">
-					<a class="head-ss" href="index.html">首页</a> <a class="head-ss"
+					<a class="head-ss" href="index.jsp">首页</a> <a class="head-ss"
 						href="#">帮助中心</a>
 				</div>
 			</div>

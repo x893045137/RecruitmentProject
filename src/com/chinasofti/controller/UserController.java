@@ -74,7 +74,7 @@ public class UserController {
 			umessage = "用户注册成功！快去登陆吧！";
 		}
 
-		ModelAndView mav = new ModelAndView("index-login");
+		ModelAndView mav = new ModelAndView("index-register");
 		mav.addObject("user", user);
 		mav.addObject("umessage", umessage);
 		return mav;
@@ -100,7 +100,7 @@ public class UserController {
 		String selectByenterprisename = userService.selectByenterprisename(enterprise.getEnterprisename());
 
 		String selectBymembership = userService.selectBymembership(enterprise.getMembership());
-		ModelAndView mav = new ModelAndView("index-login");
+		ModelAndView mav = new ModelAndView("index-register");
 
 		String message = null;
 

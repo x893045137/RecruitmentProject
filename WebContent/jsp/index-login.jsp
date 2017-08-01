@@ -97,7 +97,7 @@
 						<div class="c-lrtopt">
 							<div class="errbox">
 								<span class="err" id="account_err"></span><span
-									style="display: none" id="seekpwd">${message }</span> 用户登录 <span
+									style="display: block;" id="seekpwd">${message }</span> 用户登录 <span
 									style="float: right; font-size: 14px; margin-top: 8px;"><a
 									id="enter-login" href="#">企业登录</a></span>
 							</div>

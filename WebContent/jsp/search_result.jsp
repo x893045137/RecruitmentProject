@@ -153,7 +153,7 @@
 					<c:when test="${! empty consumer  }">
 						<div class="uer">
 							<p class="op">
-								<a class="uname e_icon at" href="pindex.jsp?lang=c">
+								<a class="uname e_icon at" href="Myjob.action?userid=${consumer.id }">
 									${consumer.username }</a>
 							</p>
 							<span class="l">|</span>

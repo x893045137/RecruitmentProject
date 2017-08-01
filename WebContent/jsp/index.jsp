@@ -95,7 +95,7 @@
 					<c:when test="${! empty consumer  }">
 						<div class="uer">
 							<p class="op">
-								<a class="uname e_icon at" href="pindex.jsp?lang=c">
+								<a class="uname e_icon at" href="Myjob.action?userid=${consumer.id }">
 									${consumer.username }</a>
 							</p>
 							<span class="l">|</span>
@@ -237,21 +237,7 @@
 				value="c" /> <input type="hidden" id="userid" value="">
 		</div>
 	</div>
-	<div class="cresume">
-		<c:choose>
-			<c:when test="${! empty consumer  }">
-				<a
-			href="https://login.51job.com/login.php?url=http%3A%2F%2Fi.51job.com%2Fresume%2Ftri_resume.php">立即创建简历，发现好工作<em
-			class="e_icon"></em></a>
-			</c:when>
-			<c:otherwise>
-			<a
-			href="index-login.jsp">立即创建简历，发现好工作<em
-			class="e_icon"></em></a>
-			</c:otherwise>
-		</c:choose>
-
-	</div>
+	
 	<div class="hm container">
 		<div class="cn">
 

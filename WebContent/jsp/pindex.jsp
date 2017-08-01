@@ -69,7 +69,7 @@
 				</p>
 				<div class="uer">
 					<p class="op">
-						<a class="uname e_icon at" href="pindex.jsp">
+						<a class="uname e_icon at" href="Myjob.action?userid=${consumer.id }">
 							${consumer.username }</a>
 					</p>
 					<span class="l">|</span>
@@ -352,7 +352,7 @@
 			$("#ubsex").val(sex);
 			$("#ubage").val(age);
 			$("#ubaddrs").val(addr); */
-			alert(id);
+			/* alert(id); */
 		$("#ubuserid").val(id);
 		$("#goUserBasicform").submit();
 	}
